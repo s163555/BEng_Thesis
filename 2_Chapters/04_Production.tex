@@ -1,0 +1,173 @@
+\chapter[Production]{Production}
+This chapter will explain the process of going from a theoretical design to actual implementation. First, the system will be simulated, and the results will be reviewed. Lastly, the process of producing the physical hardware will be discussed.
+\section{Simulation}
+During the synthesis phase of the project, it was decided that it would be a valuable learning tool to use the understanding gained from studying the materials and theory to come up with a SPICE model that can simulate the design. For simplicity, it would be beneficial to the simulation to use ideal components rather than complex physical models. This causes the circuit simulation to compute faster (because of less complex calculations) and causes the simulation to be easier to troubleshoot. The gate driver is replaced by a buffer without hysteresis and complementary output, and the power stage is replaced by a VCVS also called an E source in LTSpice. To streamline simulation efforts by using MATLAB for carrying out the necessary synthesis calculations and inputting those component values to the simulations in LTSpice, the script \autoref{lst:simulationLTspice.m} will export the component values to an external parameter file, import the parameters in LTspice and perform the simulation. The simulation output is imported automatically to MATLAB using the library ltspice2matlab \cite{ltspice2matlab} for post-processing and analysis. This improves workflow and makes it possible to compare various sets of parameters efficiently. \\
+The transient simulations are performed for a length of \SI{600}{\micro\second} with a log delay of \SI{200}{\micro\second} to ensure a steady state. The input signal is configured with a DC component of $V_{\mathrm{DC}} = \SI{2.5}{\volt}$, AC component $v_{\mathrm{p-p}} = \SI{900}{\milli\volt}$ and frequency of $f_{\mathrm{in}} = \SI{10}{\kilo\hertz}$.
+
+\subsection{Open Loop}
+A simulation model based on the theory of each function can be seen implemented in LTSpiceXVII in the figure below:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth,trim=5 260 5 260, clip]{0_Figures/Production/ltspice_sim_openloop.pdf}
+	\caption{LTspice model of class-D amplifier using ideal components without feedback}
+	\label{fig:ltspice_sim_openloop}
+\end{figure}
+Seen in \autoref{fig:ltspice_sim_openloop} is the circuit as described in the synthesis chapter, although with the gate driver circuit and power stage implemented with ideal components rather than complex SPICE component models. Upon simulating the circuit and analysing the following data is obtained:
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Production/sim_openloop_output.eps}
+	\caption{LTspice simulation output of openloop configuration}
+	\label{fig:ltspice_sim_openloop_output}
+\end{figure}
+On \autoref{fig:ltspice_sim_openloop_output} the output of the open loop transient simulation from \autoref{fig:ltspice_sim_openloop} can be seen. Note that under the x-axis of the figure, it is zeroed at \SI{200}{\micro\second}. This is done to ensure a steady-state in the transient simulation. In the upper subfigure the two node voltages of the bridge-tied load can be seen as described in the LTspice model in \autoref{fig:ltspice_sim_openloop}. In the output signal on both subfigures some noticeable but minor output ripple can be seen. This is due to the reactive components characteristics in the output filter.
+
+\begin{figure}[htbp]
+	\begin{subfigure}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{Production/sim_open_fosc.eps}
+		\subcaption{$f_{\mathrm{sw}}$ over $V_{\mathrm{in}}$}
+		\label{fig:ltspice_aim_fosc}
+	\end{subfigure}%
+	\begin{subfigure}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{Production/sim_open_duty.eps}
+		\subcaption{$D$ over $V_{\mathrm{in}}$}
+		\label{fig:ltspice_aim_duty}
+	\end{subfigure}
+	\caption{Simulated $f_{\mathrm{sw}}$ and $D$ over DC values of $V_{\mathrm{in}}$ with zero amplitude}
+	\label{fig:ltspice_aim}
+\end{figure}
+Seen in \autoref{fig:ltspice_aim} is the simulated AIM, plotted for $f_{\mathrm{sw}}$ in \Cref{fig:ltspice_aim_fosc} and $D$ in \Cref{fig:ltspice_aim_duty}. This is done with zero amplitude and a step parameter of DC input. It is noted that the switching frequency produces the expected curve according to the calculations. This varying switching frequency is a particular trait of the astable integrating modulator due to the non-linear behavior of the carrier waveform and the propagated phase delay of the self-oscillation. The duty cycle fits the theoretical model as seen in in \Cref{fig:modulator_duty_synth}.
+%skriv om hvad der ses
+
+
+\subsection{Closed Loop}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.9\textwidth,trim=5 230 5 230, clip]{0_Figures/Production/ltspice_sim_regulator.pdf}
+	\caption{LTspice model of class-D amplifier using ideal power stage switches with a control loop}
+	\label{fig:ltspice_sim_closedloop}
+\end{figure}
+Seen in \autoref{fig:ltspice_sim_closedloop} is the circuit as described in its entirety. This includes the control loop with the LQR and PI controller feedback loop from the bridge-tied load.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Production/sim_closedloop_output.eps}
+	\caption{LTspice simulation output of closed loop configuration}
+	\label{fig:ltspice_sim_closedloop_output}
+\end{figure}
+The output from the closed loop simulation model can be seen in \autoref{fig:ltspice_sim_closedloop_output}. Note that under the x-axis of the figure, it is zeroed at \SI{200}{\micro\second}. This is undertaken to ensure a steady-state in the transient simulation. In the upper subfigure are the two voltage nodes on each side of the bridge-tied load and in the lower plot is the differential output signal. It is noted that the amplitude of the differential output signal is approximately half of the open loop configuration.
+\clearpage
+\section{Inductor design}
+%TODO Skriv noget om spole vikling og kerne valg, etc. Referer til \autoref{lst:inductor_design2}
+During the synthesis phase, a value for the output filter inductor was obtained. Now, an inductor design must be made with regards to core material, core size and wire gauge. Based on an initial proposal, it was decided to investigate between two options being MICROMETALS, Inc. toroid cores of the T80-2 and T94-2 variants. The choice being a relatively small core size that would adequately fit the PCB in a parallel mounting position, and a material '2'-type that holds necessary linear frequency characteristics. The inductor wire gauge was chosen fairly large to retain a modest number of turns and in turn causing the winding to be easier to do by hand.
+Based on the datasheet \cite{micrometals} expressions, the calculations were made in MATLAB in accordance with \autoref{lst:inductor_design2}. The calculation showing that both options are valid choices in terms of not saturating the core and yielding the following results. \\
+For T-80-2:
+$$N = \SI{17}{\turns}$$
+$$B = \SI{32}{\milli\tesla}$$
+For T-94-2:
+$$N = \SI{14.5}{\turns}$$
+$$B = \SI{25}{\milli\tesla}$$
+The T-80-2 was chosen because of its smaller core size and wound by hand using \SI{0.95}{\milli\meter} wire gauge from inventory. \\
+\subsubsection{Measurement}
+After winding the two coils, a validation of the coil specifications is needed. A lab test with a N4L PSM1735 frequency analyzer \cite{n4l_analyzer}, the following inductance over frequency was measured:
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Production/coil_measurement.eps}
+	\caption{Inductor measurement over the frequency range \SIrange[scientific-notation = engineering]{1000}{35000000}{\hertz}}
+	\label{fig:inductor_measurement}
+\end{figure}
+Seen in \autoref{fig:inductor_measurement}, is a measurement sweep with the wound inductor coil under test. The upper subfigureshows inductance over frequency, and measures reasonably the expected \SI{1.768}{\micro\henry} on the output filter inductor. relatively linearly until around \SI{10}{\mega\hertz} where there is a peak and then a drop-off in inductance. As this frequency is significantly higher than the switching frequency of the pulse signal it is acceptable. The lower subfigure describes the resistance over frequency and is also comparatively low until it reaches \SI{20}{\ohm} at \SI{10}{\mega\hertz}. This should give an idea of the amount of heat dissipation within the output filter inductors can be negligible on the frequency range of interest.
+
+\subsection{Mounting method}
+In the PCB design a through-hole mounting was decided in the original design. However, in the project a surface mount was decided. The problem with mounting the output filter inductors in the through-hole method is that it can cause the removal to be much more difficult as well as the protrusion of the conducting wires on the opposing side of the PCB can increase EMI in the sensitive circuitry.
+
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}[t]{0.5\textwidth}
+		\centering
+		\input{0_Figures/Production/coil_mounting_thruhole.tikz}
+		\subcaption{Through-hole mounting}
+		\label{fig:inductor_mount_thruhole}
+	\end{subfigure}%
+	\begin{subfigure}[t]{0.5\textwidth}
+		\centering
+		\input{0_Figures/Production/coil_mounting_surface.tikz}
+		\subcaption{Surface mounting}
+		\label{fig:inductor_mount_surface}
+	\end{subfigure}
+	\caption{Inductor mounting sketch, not to scale}
+	\label{fig:inductor_mounting}
+\end{figure}
+
+Seen in \autoref{fig:inductor_mounting} are two possible ways to mount the output filter inductors. In \Cref{fig:inductor_mount_thruhole} the two conductive wires of the inductor are inserted through the Via on the PCB and soldered on the opposing end. In \Cref{fig:inductor_mount_surface} the two wires are bent and soldered to the Via on the same side as the inductor. In this project the primary benefit of this mounting method is that it is desired to be able to test different inductors and it considers the possibility to remove the coil a requirement. A through-hole mounting is not ideal because the increased thermal connection becomes excessively large and the introduced heat on the copper by the soldering iron is dissipated into other areas of the PCB. Therefore, some heat restriction is required. This is knowledge that was acquired experimentally during the mounting process.
+
+\section{Printed Circuit Board}
+This section will explain the process of manufacturing the physical PCBs for the class-D amplifier. The layout file from \cite{nagy_special_course} was used in this project. It is comprised of two PCBs. The first part handles the IO and in addition has the input filter, preamp and PI controller. The other PCB includes the modulation, power stage, output filter and regulation subcircuit. \\
+
+\subsection{Input-Output Printed Circuit Board}
+Refer to \autoref{fig:altium_layout_io_board} for the layout of the IO PCB.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.9\textwidth,trim=0 175 0 175, clip]{0_Figures/Production/Control_PCB.pdf}
+	\caption{Layout of IO PCB}
+	\label{fig:altium_layout_io_board}
+\end{figure}
+\subsection{Amplifier Printed Circuit Board}
+Refer to \autoref{fig:altium_layout_power_stage} for the Amplifier PCB.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.6\textwidth,trim=60 0 60 40, clip]{0_Figures/Production/Power_Stage.pdf}
+	\caption{Layout of Amplifier PCB}
+	\label{fig:altium_layout_power_stage}
+\end{figure}
+
+\subsection{Methodology}
+
+\begin{figure}[htbp]
+	\centering
+	\tcbox{\includegraphics[width=0.9\textwidth]{Production/amplifier_after_soldering.jpg}}
+	\caption{Amplifier after solder work, without output filter inductors}
+	\label{fig:amp_solder_no_coils}
+\end{figure}
+Seen in figure \autoref{fig:amp_solder_no_coils} are the two amplifier PCBs. The upper PCB is the IO, preamplifier, input filter and PI regulator. The lower PCB is amplifier.
+The implementation is a 4-layer PCB design in Altium Designer and was manufactured professionally and sent to DTU without components. During production of the PCBs, a 63Sn/37Pb solder paste was added and SMD components were placed unto the PCB. Next the PCBs were placed in a reflow oven on the appropriate reflow cycle in accordance with the solder paste datasheet. Finally, the PCBs were inspected, cleaned and faulty soldering was corrected and through-hole components were soldered by hand. \\
+During the production phase, some modifications were made to the original specification due to various circumstances like alternative inventory, better component choice, etc. A table with only the modifications to the BOM can be in \autoref{tab:bom_mod}.
+\begin{table}[htbp]
+	\adjustbox{max width=\textwidth}{%
+	\centering
+	\begin{tabular}{@{}llllll@{}}
+		\toprule
+		\textbf{Circuit} & \textbf{Component} & \textbf{Value} & \textbf{Footprint} & \textbf{Rating} & \textbf{Reason} \\ \midrule
+		IO & C2,C3 & 120n & 0603 & X7R16V & 100n: No inventory \\
+		IO & C4,C9,C10,C11 & 100n$\parallel$1u & 0603 & X7R16V & 120n: Improvement \\
+		IO & C5 & 1u & 0603 & X7R50V & X5R6.3V: No inventory \\
+		IO & C15 & 1.5n & 0603 & X7R16V & NC: Added \\
+		IO & C8 & 1000u & RAD-0.3in & 63Vdc & 1500u: No inventory \\
+		IO & R4,R7 & 3.01k & 0603 & 1\% & 4.75k: Improvement \\
+		IO & R8 & 475 & 0603 & 1\% & 2.49k: Improvement \\
+		Power stage & C11,C19 & 120n & 0603 & X7R16V & 100n: No inventory \\
+		Power stage & C1,C15 & 22n$\parallel$1u & 0603 & X7R50V & 120n: Improvement \\
+		Power stage & D1,D2 & Diode & NA & 75V 0.25A & 85V 0.25A: No inventory \\
+		AIM+reg & C18,C20,C27, & 120n & 0603 & X7R16V & 100n: No inventory \\
+		AIM+reg & C28,C29,C30,C31 & 120n & 0603 & X7R16V & 100n: No inventory \\
+		AIM+reg & C8 & 120n & 0603 & X7R16V & Implement \\
+		AIM+reg & RA1 & 2.21k & 0603 & 1\% & 2.2k: No inventory \\
+		\bottomrule
+	\end{tabular}}
+	\caption{Modifications to the Bill of Materials}
+	\label{tab:bom_mod}
+\end{table}
+% Skriv om PCB mods fra Søren - ind i ovenstående tabel
+%IO BOARD
+%Skift C4 til 100 nF || 1 uF
+%Skift R4 og R7 til 3.01k
+%Skift R8 til 475 ohm
+%C9, C10, C11: 100 nF || 1 uF
+
+%AMP
+%Skift C1 og C15 til 22 nF + 1 uF (X7R 50 V)}
+In the table with modifications to the BOM in conjunction with \autoref{tab:bom}, a comprehensive list of the amplifier components and their values are found. In the modification list, some components were experimentally improved in accordance with the further analysis.
+
+\subsection{Remarks}
+After the circuits were produced, components were soldered to the PCB as described in the previous section, initial inspections revealed some cross-connections due to imperfections in the soldering process. Therefore, manual corrections had to be done on the reflow process. Following the corrections, under visual inspection the PCBs appeared to be in a suitable condition. Some DMM measurements on the Amplifier PCB were performed to verify proper connections between ICs and the copper pads. This indicated adequate solder work ready for conclusive analysis.

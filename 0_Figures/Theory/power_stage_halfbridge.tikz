@@ -1,0 +1,52 @@
+%\begin{circuitikz} [>=Triangle]
+% MIDDLE
+%\begin{scope} %[blue]
+%	% Resistor
+%	\draw (-1,0) node[](left_R){} to[] (0.5,0) node[](right_R){};
+%	% Filter cap
+%	%\draw (left_R) 	node[]{}	to[short] 	++(0,-1.5) 	node(left_C){};
+%	%\draw (right_R) node[]{} 	to[short]	++(0,-1.5) 	node(right_C){};
+%	%\draw (left_C) to[C,l=$C_{f}$] (right_C);
+%	\draw (left_R) node[circ]{} to[C,l=$C_{f}$] ++(0,-1.5) node[ground]{};
+%	\draw (right_R) to[R,l=$R_{f}$] ++(0,-1.5) node[ground]{};
+%	%\draw (0,-1.5) to[short,*-] ++ node[]{};
+%	%\draw to[short, -] ++(0.5,-1.5) node[ground]{};
+%	% Left inductor
+%	\draw (left_R)
+%	++(-2,0) node[](left_L){}
+%	to[L,l=$L_{ind}$] (left_R);
+%\end{scope}
+%% LEFT SIDE
+%\begin{scope} %[red]
+%	% Top FET
+%	\draw (left_L) 
+%	to[Tnmos,n=T1] ++(0,3) node[tground](left_VD){} node[above]{$V_{DD}$};
+%	\draw (T1.G) node[left]{$q$} ++(+1.2,0) node[]{$Q_1$};
+%	% Bottom FET
+%	\draw (left_L) ++(0,-3)
+%	node[tground](left_VS){} node[below]{$V_{SS}$}
+%	to[Tnmos,n=T2] ++(0,3) node[circ]{};
+%	\draw (T2.G) node[left]{$\bar{q}$} ++(+1.2,0) node[]{$Q_2$};
+%\end{scope}
+
+
+%\draw (3.00, -5.77) node[Tnmos](nmos1){$Q_{1}$};
+%\draw (3.00, -2.23) node[Tnmos](nmos2){$Q_{1}$};
+%\draw (nmos1.B) to[short] (1, -5.77) ;
+%\draw (nmos1.E) node[vee]{$V_{DD}$} ;
+%\draw (nmos2.E) to[short] (nmos1.C) ;
+%\draw (nmos2.B) to[short] (1, -2.23) ;
+%\draw (nmos2.C) node[vee ,rotate=180]{$V_{SS}$} ;
+%\draw (6, -6) node[ground]{} ;
+%\draw (3, -4) to[L, l=$L_{\mathrm{ind}}$, *-*] ++(2, 0) coordinate(point1) to[C, l=$C_{f}$, *-] ++(0, -2) coordinate(point2) ;
+%\draw (point1) to[short, *-] ++(2, 0) to[R, l=$R_{f}$] ++(0, -2) to[short] (point2) ;
+\draw (3.00, -5.77) node[nmos](nmos1){$Q_{2}$};
+\draw (3.00, -2.23) node[nmos](nmos2){$Q_{1}$};
+\draw (nmos1.B) to[short, -o] (1.7, -5.77) node[left]{$\bar{q}$};
+\draw (nmos1.E) node[vee]{} node[below, yshift=-0.35cm]{$V_{\mathrm{SS}}$} ;
+\draw (nmos2.E) to[short] (nmos1.C) ;
+\draw (nmos2.B) to[short, -o] (1.7, -2.23) node[left]{$q$};
+\draw (nmos2.C) node[vcc]{} node[above, yshift=0.35cm]{$V_{\mathrm{DD}}$} ;
+\draw (6, -6) node[ground]{} ;
+\draw (3, -4) to[L, l=$L_{\mathrm{ind}}$, *-*] ++(2, 0) coordinate(point1) to[C, l=$C_f$, *-] ++(0, -2) coordinate(point2) ;
+\draw (point1) to[short, *-] ++(2, 0) to[R, l=$R_f$] ++(0, -2) to[short] (point2) ;

@@ -1,0 +1,12 @@
+		% Single-ended filter version
+		\draw (0, -1) coordinate(point1) to[L, l=$L$] ++(2, 0) to[R, l=$R_{ESR}$, -*] ++(2, 0) coordinate(point2) to[C, l_=$C_{f}$, *-*] ++(0, -3) coordinate(point3) to[short, *-] ++(-2, 0) to[short] ++(-2, 0) to[short, -o] ++(-1, 0) coordinate(point4) ;
+		\draw (point1) to[short, -o] ++(-1, 0) ;
+		\draw (point2) to[short, *-] ++(2, 0) to[R, l_=$R_{f}$] ++(0, -3) to[short, -*] (point3) ;
+		\draw (point2) ++(3.2,0) to[open, v=$V_{\mathrm{out}}(s)$] ++(0, -3) (point3) ;
+		\draw (point1) ++(-1,0) to[open, v=$V_{\mathrm{in}}(s)$] (point4);
+		% Differential filter version
+		%		\draw (0, -1) coordinate(point1) to[L, l=$L_{ind}$] ++(2, 0) to[R, l=$R_{ESR}$, -*] ++(2, 0) coordinate(point2) to[C, l_=$C_{BTL}$, *-*] ++(0, -3) coordinate(point3) to[R, l=$R_{ESR}$, *-] ++(-2, 0) to[L, l=$L_{ind}$] ++(-2, 0) to[short, -o] ++(-1, 0) coordinate(point4) ;
+		%		\draw (point1) to[short, -o] ++(-1, 0) ;
+		%		\draw (point2) to[short, *-] ++(2, 0) to[R, l_=$R_{BTL}$] ++(0, -3) to[short, -*] (point3) ;
+		%		\draw (point2) ++(3.2,0) to[open, v=$V_{\mathrm{out}}(s)$] ++(0, -3) (point3) ;
+		%		\draw (point1) ++(-1,0) to[open, v=$V_{\mathrm{in}}(s)$] (point4);

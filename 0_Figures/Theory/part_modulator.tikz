@@ -1,0 +1,17 @@
+
+	% Drawn op-amp
+	\draw (0,0) 	node[op amp, noinv input up](opamp){}
+	(opamp.+) node[left] {$V_{\mathrm{hw}}$}
+	(opamp.-) node[left] {$V_{c}$};
+	% V_pwm putput
+	\draw (opamp.out)	to[short,*-o] ++(.5,0) node[right](V_pwm){$V_{\mathrm{pwm}}$};
+	% R_1 & R_2
+	\draw (opamp.+) to[short,-*] ++(0,1) node(R1R2){};
+	\draw (R1R2) ++(-2.25,0) node[left](V_ref){$V_{\mathrm{ref}}$} to[R,l=$R_{1}$,o-] (R1R2);
+	\draw (R1R2) 	to[R,l=$R_{2}$] ++(2.25,0) -| (opamp.out);
+	% R_in & R_fb
+	\draw (opamp.-) to[short,-*] ++(0,-1) node(RinRfb){};
+	\draw (RinRfb) ++(-2.25,0) node[left](V_in){$V_{\mathrm{in}}$} to[R,l=$R_{\mathrm{in}}$,o-] (RinRfb);
+	\draw (RinRfb) 	to[R,l=$R_{\mathrm{fb}}$] ++(2.25,0) -| (opamp.out);
+	% Capacitor C
+	\draw (RinRfb) to[C,l=$C_{1}$] ++(0,-1.5) node[tlground](GND){};

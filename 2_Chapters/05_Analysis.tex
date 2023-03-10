@@ -1,0 +1,227 @@
+\chapter[Analysis]{Analysis} \label{cha:Analysis}
+In this chapter various test setups will be discussed for the purpose of making quantifiable measurements of the amplifier, effects of the output filters parasitic elements on the control loop among others.
+
+\section{Hysteresis window of modulator (Simulation)}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Analysis/ltspice_aim_hysteresis_window.eps}
+	\caption{Hysteresis window on AIM}
+	\label{fig:ltspice_aim_hysteresis_window}
+\end{figure}
+Seen in \autoref{fig:ltspice_aim_hysteresis_window} is the hysteresis window conforming to the theoretical model. The analysis is performed by inputting a DC component of \SI{2.5}{\volt} with zero AC components. This gives a duty cycle of \SI{50}{\percent} and an idle switching frequency of \SI{600}{\kilo\hertz}. It is noted that the variables $V_{\mathrm{th}_{H}}$ and $V_{\mathrm{th}_{L}}$ is seen in the square waveform alternating between \SIrange{2.25}{2.75}{\volt} as mentioned in \Cref{eq:hysteresis_window_synth_a,eq:hysteresis_window_synth_b} and the carrier waveform is seen on the dashed curve. Noted is a slight non-linear curve of the carrier waveform due to the AIM capacitor charge and discharge in each cycle.
+
+\section{Output filter (Calculation and Simulation)}
+As a class-D amplifier cannot be classified as a linear time-invariant system, it is difficult to perform a small-signal analysis of the complete circuit with regards to the influence of parasitic elements in the output filter. Therefore, the output filter with various parasitic elements will be investigated using the output stage alone.
+
+\subsection{Analytical approach}
+To make nodal analysis more convenient the filter is transformed to single-ended filter type using \Cref{eq:l_ind,eq:c_btl_f,eq:r_btl_f}. 
+\begin{figure}[htbp]
+	\centering
+	\begin{circuitikz}
+		\input{0_Figures/Analysis/diagram_output_filter.tikz}
+	\end{circuitikz}
+	\subcaption{Single-ended output filter}
+	\label{fig:analysis_single_ended_lp_filter}
+\end{figure}
+
+Applying nodal analysis to \Cref{fig:analysis_single_ended_lp_filter} yields:
+\begin{equation} \label{eq:tf_outputfilter_reduction}
+	\begin{split}
+		H(s) &= \frac{V_{\mathrm{out}}(s)}{V_{\mathrm{in}}(s)} = \frac{ \frac{R_{f}}{1 + s \left(  R_{f}C_{f} \right) }}{sL + \frac{R_{f}}{1 + s \left(  R_{f}C_{f} \right) }} \\
+		&= \frac{R_{f}}{R_{f} + sL + s^{2} R_{f}LC_{f}} \\
+		&= \frac{1}{1 + s   \frac{L}{R_{f}}  + s^{2} LC_{f}}
+	\end{split}
+\end{equation}
+Finally, from \autoref{eq:tf_outputfilter_reduction} it is seen that the transfer function has no zeros and two poles.
+
+\subsubsection{Inductor parasitic ESR}
+\begin{figure}[htbp]
+	\centering
+	\begin{circuitikz}
+		\input{0_Figures/Analysis/diagram_output_filter_esr.tikz}
+	\end{circuitikz}
+	\caption{Output filter parasitic elements, addition of series resistance $R_{\mathrm{ESR}}$}
+	\label{fig:diagram_output_filter_esr}
+\end{figure}
+Seen in \autoref{fig:diagram_output_filter_esr} is a diagram of the inserted parasitic series resistance of the output filter inductor. Initial decision of numeric value of inserted parasitic resistance was an choice in desire for sufficient weight of change in behaviour and a sensibility in function. The decision was a resistance value of \SI{300}{\milli\ohm}.
+
+\begin{equation} \label{eq:tf_outputfilter_esr_reduction}
+	\begin{split}
+		H(s) &= \frac{V_{\mathrm{out}}(s)}{V_{\mathrm{in}}(s)} = \frac{\frac{R_{f}}{1 + sR_{f}C}}{R_{\mathrm{ESR}} + sL_{\mathrm{ind}} + \frac{R_{f}}{1 + sR_{f}C}} \\
+		&= \frac{R_{f}}{ \left(  R_{\mathrm{ESR}} + R_{f} \right)  + s(L+R_{f} R_{\mathrm{ESR}}C_{f}) + s^{2} (R_{f}LC_{f})}
+	\end{split}
+\end{equation}
+
+Looking to \autoref{eq:tf_outputfilter_esr_reduction}, it is seen that the addition of a series resistance to the inductor does not cause addition of a pole or zero which is an indication that the frequency response of the system will not be significantly altered by the series resistance of the inductor.
+
+\subsubsection{Inductor parasitic capacitance}
+Decision on a equivalent parallel capacitance of the inductor was made by calculating the resonance frequency of the inductor from earlier impedance analysis and back-calculating for solving for the capacitance using an LC-equation. The resulting value was \SI{120}{\pico\farad}.
+\begin{figure}[H]
+	\centering
+	\begin{circuitikz}
+		\input{0_Figures/Analysis/diagram_output_filter_c_par.tikz}
+	\end{circuitikz}
+	\caption{Output filter parasitic elements, addition of parallel capacitance $C_{s}$}
+	\label{fig:diagram_output_filter_c_par}
+\end{figure}
+Seen in \autoref{fig:diagram_output_filter_c_par} is a diagram of inserted parallel capacitance of inductors.
+
+\begin{equation} \label{eq:tf_outputfilter_parallel_c_reduction}
+	\begin{split}
+		H(s) &= \frac{V_{\mathrm{out}}(s)}{V_{\mathrm{in}}(s)} = \frac{\frac{R_{f}}{1 + sR_{f}C_{f}}}{\frac{sL}{1+s^{2}LC_{L}} + \frac{R}{1 + sRC}} \\
+		&= \frac{R + s^{2} RLC_{L}}{R + sL + s^{2} (RLC_{L} + RLC)} \\
+	\end{split}
+\end{equation}
+
+From \autoref{eq:tf_outputfilter_parallel_c_reduction} it is seen that a zero is added in the numerator of the transfer function. This indicates a change in the overall response of the system.
+
+\subsubsection{Summary}
+In the derived expressions for transfer functions of addition of inductor series resistance and parallel capacitance, it is seen from a control loop stand point that the parallel capacitance makes the most significant change to the frequency response. The location of the zero is presumably rather high in frequency, based on the small capacitor value of \SI{120}{\pico\farad}.
+
+\subsection{Simulation approach}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Analysis/ltspice_output_filter_parasitic.eps}
+	\caption{Bode plot of output filter using ideal LC filter, parasitic elements in inductor and parasitic elements in capacitor}
+	\label{fig:ltspice_output_filter_l_parasitic}
+\end{figure}
+
+Looking at \autoref{fig:ltspice_output_filter_l_parasitic}, different plots are seen of the small-signal output of the output filter. This figure is based of a small-signal analysis from \autoref{fig:ltspice_output_filter_smallsignal}. First the ideal filter is plotted and contains a relatively prominent peak around the cut-off frequency. This is by design, as the Q factor is relatively high. This resonance peak was decided to compensate for some switching losses in the power stage. It is noted that as parasitic elements are added in the inductor and capacitor, this resonance peak is lowered and will presumably cause further switching losses in the output stage. In the magnitude plot it can be seen that overall, the parasitic elements in the capacitor seem to make a larger change to the frequency response in the high-frequency range.
+
+\section{Initial tests (Hardware)}
+A preliminary analysis was attempted to be made on the hardware. Unfortunately, there were stability issues with the setup. Differential voltage measurements made across the load revealed through-put of the amplified input signal, with a high-frequent oscillation superimposed. On rough estimates, the high-frequent oscillation signal appeared to be in the vicinity of the resonance frequency of the output filter. Shortly thereafter during testing, the lower half-bridge short-circuited, and reparation of the hardware was necessary. After repairs were completed on the amplifier circuit and tested to be functional, next will be some hardware analysis on the circuitry.
+
+\section{Control loop (Hardware)}
+Regulator characteristics for amplifier circuitry are determined by its converter loop transfer function. This transfer function can be illustrated by a Bode plot. This representation of magnitude and phase over a frequency spectrum gives insight into the speed of the regulation loop and the general stability of the system. To acquire the Bode plot data measurements need to be made on the circuit. This will be explained in the following sections.
+
+\subsection{Measurement setup}
+A measurement setup is implemented using a Bode 100 Vector Network Analyzer \cite{bode100_manual}. To determine the control loop parameters of an active circuit, a wideband injection transformer is required. Using the recommended typical measurement setup from \autoref{fig:injection_transformer_setup}, the following measurement setup is implemented:
+
+\begin{figure}[htbp]
+	\centering
+	\adjustbox{max width=\textwidth}{%
+	\input{0_Figures/Analysis/block_diagram_transformer_injection.tikz}
+	}%
+	\caption{Block diagram of measurement setup for transformer injection measurement of control loop}
+	\label{fig:block_diagram_transformer_injection}
+\end{figure}
+
+Seen in \autoref{fig:block_diagram_transformer_injection} is an overall block diagram of the measurement setup. The Injection Transformer B-WIT 100 transformer \cite{injection_transformer_manual} is used with an injection resistor of \SI{10}{\ohm} inserted in the feed-forward loop between the PI controller and the modulator subcircuits. Typically the injection transformer is inserted across the injection resistor in the feedback loop as per the manual diagram, but to secure the equipment from common-mode voltages, it was decided to break the loop in the low voltage circuitry between the PI controller and the modulator. A breakout board was made using a copper-clad circular perf board, connectors, a resistor and cables. In this project, any reactive characteristics from the speaker will be disregarded. In the practical measurement setup, it will be replaced by a resistive element. Choosing packages for the introduced parasitic elements was based on availability. For the inductor series resistance, three \SI{0.1}{\ohm} was connected in series. For the inductor parallel capacitance, the chosen package was a ceramic 0603 \SI{120}{\pico\farad} capacitor.
+
+\begin{figure}[htbp]
+	\centering
+	\tcbox{\includegraphics[width=0.8\textwidth, trim=0 0 20cm 10cm, clip]{Analysis/bode100_breakout_board.jpg}}
+	\caption{Breakout board for transformer injection measurement setup}
+	\label{fig:bode100_breakout_board}
+\end{figure}
+The breakout board can be seen in \autoref{fig:bode100_breakout_board} mounted on the IO PCB of the amplifier. The two BNC connectors are for Probe 1 and Probe 2 of the Bode 100 Network Vector Analyzer. The red and black \SI{4}{\milli\meter} lab connectors are for the injection transformer. Finally, the green/yellow \SI{4}{\milli\meter} lab connector is for a ground reference on the analyzer probes.
+
+
+
+\subsection{Outer loop open, inner loop closed}
+\begin{figure}[H]
+	\centering
+	\input{0_Figures/Analysis/diagram_pi_pqr_controller.tikz}
+	\caption{Diagram of PI-LQR controller}
+	\label{fig:control_diagram_pi_lqr_controller}
+\end{figure}
+
+Seen in \autoref{fig:control_diagram_pi_lqr_controller} is the more elaborated diagram overview of the feedback loop. Observed are the inner loop (LQR) and outer loop (PI) with their respective error amplifiers. First, the system will be analysed as open PI loop and closed LQR loop. Next some parasitic elements will be introduced on the output stage, and the same analysis will be repeated with the LQR loop opened.
+
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=0.6\textwidth]{Analysis/bode100_measurement_pi_open_lqr_closed.eps}
+%	\caption{Measurement of frequency response of PI with closed LQR controller and $R_{\mathrm{BTL}}=\SI{4}{\ohm}$}
+%	\label{fig:bode100_measurement_pi_open_lqr_closed}
+%\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Analysis/bode100_tf_pi_lqr_closed_300mohm_120pf.eps}
+	\caption{Measurement of frequency response of PI with closed LQR controller with addition of parasitic elements}
+	\label{fig:bode100_measurement_pi_open_lqr_closed_esr}
+\end{figure}
+Seen in \autoref{fig:bode100_measurement_pi_open_lqr_closed_esr} are bode plots displaying the change in magnitude and phase response with addition of parasitic elements in the filter inductor. 
+
+\subsection{Outer loop open, inner loop open}
+Next the inner loop (LQR) will be opened and only the PI controller will remain loop under test. The same measurements will be repeated and discussed.
+
+\begin{figure}[H]
+	\centering
+	\input{0_Figures/Analysis/diagram_pi_controller.tikz}
+	\caption{Diagram of PI controller feedback loop}
+	\label{fig:control_diagram_pi_controller}
+\end{figure}
+Seen in \autoref{fig:control_diagram_pi_controller} is the control loop with only the outer feedback loop active. The same parameters in the test will be repeated and measured. 
+\subsubsection{Parasitic elements}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Analysis/bode100_tf_pi_lqr_open_300mohm_120pf.eps}
+	\caption{Measurement of frequency response of PI with open LQR controller with addition of parasitic elements}
+	\label{fig:bode100_measurement_pi_open_lqr_open_esr}
+\end{figure}
+
+In \autoref{fig:bode100_measurement_pi_open_lqr_open_esr} is the frequency response of the outer control loop with the inner loop open.
+
+\subsection{Discussion}
+In this discussion section, the data collected from control loop measurements in the two parameterised tests will be processed using \autoref{lst:bode100importer.m}. Using System Identification Toolbox \cite{matlab_sysident_toolbox} a transfer function can be estimated to create dynamic system models from measured data. 
+
+Looking at the addition of the series resistance of the inductor there is no significant change in the frequency response. Only with the addition of a parallel capacitance the frequency band between \SIrange{1}{50}{\kilo\hertz} is changed seemingly with an addition of a zero around \SI{300}{\hertz}. This is expected as per the analytical investigation into the effect of the output filter transfer function with the addition of a parallel capacitor from \Cref{eq:tf_outputfilter_reduction,eq:tf_outputfilter_esr_reduction,eq:tf_outputfilter_parallel_c_reduction}.
+
+The preliminary indication looking at the measured transfer functions \Cref{fig:bode100_measurement_pi_open_lqr_closed_esr,fig:bode100_measurement_pi_open_lqr_open_esr} indicates the closed versus open of the LQR loop is not significantly affected by the addition of inductor parasitic elements in the low frequency band. In other words, closing the LQR loop had no mitigating effects on the parasitic elements influence on the parasitic elements. It did, however, did mitigate a discontinuity in the frequency band between \SIrange[scientific-notation = engineering]{100}{500}{\kilo\hertz} range both in the magnitude response and phase delay. This does not seem to be exclusively related to the parasitic elements introduced during the measurements, as the control loop without any added parasitic elements is also displays this characteristic.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Analysis/bode100_estimated_tf.eps}
+	\caption{Estimated transfer functions of PI loop with closed LQR loop}
+	\label{fig:bode100_estimated_tf}
+\end{figure}
+In \autoref{fig:bode100_estimated_tf} is the estimated control loop transfer functions using fourth-order transfer function estimation. It appears that the modulation frequency peak at \SI{600}{\kilo\hertz} has been shifted up in frequency to \SI{4}{\mega\hertz} as the transfer function was estimated. This is a processing artifact but is not part of the measurement. Plausibly the estimation error could be mitigated by applying the transfer function estimation with a higher order. However, this is deemed not of significance for the parasitic element transfer function analysis.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Analysis/bode100_estimated_parasitic_transfer_function.eps}
+	\caption{Estimation of transfer function of inductor parasitic elements on PI loop with and without LQR loop based on \autoref{fig:bode100_estimated_tf}}
+	\label{fig:bode100_estimated_parasitic_transfer_function}
+\end{figure}
+In \autoref{fig:bode100_estimated_parasitic_transfer_function} the transfer function of the inductor parasitic elements are estimated with a division calculation in MATLAB. As the transfer function is calculated with a function division it produces a relative transfer function to determine the frequency bands that are most affected by the parasitic elements. It is noted that particularly in the frequency band between \SIrange[scientific-notation = engineering]{10}{100}{\kilo\hertz} the parasitic elements add a significant gain of \SI{15}{\decibel} and approximately \ang{45} of phase shift. 
+
+As the PI control loop has a time constant $\tau_{i} = \SI{50}{\micro\second}$ and the effect of the parasitic transfer function in the higher frequencies at \SI{100}{\kilo\hertz} is in an interval of \SI{10}{\micro\second} it is proposed to change the PI controller time constant $\tau_{i}$ to an order of five times larger. This would mean adjusting the value of the PI controller resistor $R_{\mathrm{PI}}$ from \SI{33}{\kilo\ohm} to \SI{6.6}{\kilo\ohm}. This would mean a more aggressive integrator with a time constant of \SI{9.9}{\micro\second}.
+\subsubsection{Theoretical control loop}
+
+\begin{figure}[htbp]
+	\centering
+	\input{0_Figures/Analysis/diagram_control_loop.tikz}
+	\caption{Diagram of theoretical control loop}
+	\label{fig:diagram_control_loop_theoretical}
+\end{figure}
+
+In \autoref{fig:diagram_control_loop_theoretical} the control loop is seen in its theoretical form, where $\mathrm{C}$ is control, $\mathrm{P}$ is plant, $\mathrm{F}$ is feedback and $\mathrm{x}$ and $\mathrm{y}$ are the input and output, respectively. 
+When assessing the transfer function for open loop, starting on the right and moving left gives:
+\begin{equation} \label{eq:control_loop_open}
+	H_{o} = P \cdot C \cdot F
+\end{equation}
+And for the closed loop is starting on the right and moving left gives:
+\begin{equation} \label{eq:control_loop_closed}
+	y = P \cdot C \cdot \left( x - F \cdot y \right) 
+\end{equation}
+Where $C \cdot P$ is the feed-forward and $\left( x - F \cdot y \right) $ is the feedback. Applying control loop theory from \autoref{eq:control_loop_open} in the open loop to generating a theoretical transfer function of the system. This is accomplished using MATLAB and Simulink with the Control System Toolbox \cite{matlab_control_toolbox} with the simulation model in \autoref{fig:simulink_control_loop} is used to construct an open loop transfer function of the amplifier.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\textwidth, trim=120 180 120 180, clip]{Analysis/control_loop.pdf}
+	\caption{Simulink model of open loop transfer function in control loop}
+	\label{fig:simulink_control_loop}
+\end{figure}
+
+Using this Simulink model and the derived expressions from the output filter \Cref{eq:tf_outputfilter_reduction,eq:tf_outputfilter_esr_reduction,eq:tf_outputfilter_parallel_c_reduction} the open loop frequency response can be obtained.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Analysis/simulink_control_loop_measurement_comparison.eps}
+	\caption{Comparison of measured transfer function and the theoretically obtained open loop transfer function of the system}
+	\label{fig:control_loop_measurement_comparison}
+\end{figure}
+
+Seen in \autoref{fig:control_loop_measurement_comparison} is the comparison between the measured control loop using the transformer injection method and estimated with an 8th order transfer function compared with the theoretically derived expression. The increased order in the transfer function was necessary to do to obtain a meaningful comparison with the theoretical transfer function. For the purpose of validating the measurement, it seems to fit reasonably with the results that could be expected. It would appear that the measured control loop seems lower in magnitude than the actual expected transfer function level, although this could be explained when the reference level of the measuring instrument was set quite low to protect the injection transformer from overloading. This could possibly explain why there is a discrepancy in the magnitude. The difference in phase reference is probably occurred through data processing with phase wrapping performed in the analysis software.

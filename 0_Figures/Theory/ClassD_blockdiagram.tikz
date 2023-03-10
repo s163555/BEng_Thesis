@@ -1,0 +1,77 @@
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,117); %set diagram left start at 0, and has height of 117
+
+%Rounded Rect [id:dp8561064043090778] 
+\draw   (25,43) .. controls (25,40.24) and (27.24,38) .. (30,38) -- (70,38) .. controls (72.76,38) and (75,40.24) .. (75,43) -- (75,58) .. controls (75,60.76) and (72.76,63) .. (70,63) -- (30,63) .. controls (27.24,63) and (25,60.76) .. (25,58) -- cycle ;
+
+%Shape: Rectangle [id:dp3490479820342707] 
+\draw   (100,25) -- (175,25) -- (175,75) -- (100,75) -- cycle ;
+
+%Shape: Rectangle [id:dp37255646201919634] 
+\draw   (200,25) -- (250,25) -- (250,75) -- (200,75) -- cycle ;
+
+%Shape: Rectangle [id:dp7847032693215759] 
+\draw   (275,25) -- (325,25) -- (325,75) -- (275,75) -- cycle ;
+
+%Shape: Rectangle [id:dp31546701870918703] 
+\draw   (350,25) -- (400,25) -- (400,75) -- (350,75) -- cycle ;
+
+%Straight Lines [id:da6350274327867016] 
+\draw    (75,50) -- (98,50) ;
+\draw [shift={(100,50)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Straight Lines [id:da8446351183431686] 
+\draw    (175,50) -- (198,50) ;
+\draw [shift={(200,50)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Straight Lines [id:da6769720987576957] 
+\draw    (250,50) -- (273,50) ;
+\draw [shift={(275,50)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Straight Lines [id:da640763154281043] 
+\draw    (325,50) -- (348,50) ;
+\draw [shift={(350,50)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Shape: Rectangle [id:dp19014479748101398] 
+\draw  [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ][dash pattern={on 0.84pt off 2.51pt}] (89.69,10) -- (340,10) -- (340,100) -- (89.69,100) -- cycle ;
+
+% Text Node
+\draw (137.5,50) node   [align=left] {\begin{minipage}[lt]{51.00000000000001pt}\setlength\topsep{0pt}
+\begin{center}
+Modulator
+\end{center}
+
+\end{minipage}};
+% Text Node
+\draw (225,50) node   [align=left] {\begin{minipage}[lt]{34pt}\setlength\topsep{0pt}
+\begin{center}
+Power\\Stage
+\end{center}
+
+\end{minipage}};
+% Text Node
+\draw (300,50) node   [align=left] {\begin{minipage}[lt]{34pt}\setlength\topsep{0pt}
+\begin{center}
+Output\\Filter
+\end{center}
+
+\end{minipage}};
+% Text Node
+\draw (375,50) node   [align=left] {\begin{minipage}[lt]{34pt}\setlength\topsep{0pt}
+\begin{center}
+Load
+\end{center}
+
+\end{minipage}};
+% Text Node
+\draw (50,50.5) node   [align=left] {\begin{minipage}[lt]{34pt}\setlength\topsep{0pt}
+\begin{center}
+Input
+\end{center}
+
+\end{minipage}};
+% Text Node
+\draw (194,81) node [anchor=north west][inner sep=0.75pt]   [align=left] {Class-D};
+
+
+\end{tikzpicture}

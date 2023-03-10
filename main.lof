@@ -1,0 +1,70 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Block diagram of basic class-D amplifier topology.\relax }}{2}{figure.caption.14}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Most basic block diagram of a class-D system\relax }}{4}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Overview block diagram of class-D circuit\relax }}{5}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Part-schematic of Filter and input preamp\relax }}{5}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Simple comparator modulator\relax }}{6}{figure.caption.19}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Typical PWM modulation scheme example\relax }}{7}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Part-schematic of modulator\relax }}{7}{figure.caption.21}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Part-schematic of the dead-time and gate driver\relax }}{10}{figure.caption.22}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Bridge configurations for power stage and output filter\relax }}{11}{figure.caption.23}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Full-bridge power stage with current flow\relax }}{11}{figure.caption.24}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Comparison of single-ended and differential type low-pass filter\relax }}{12}{figure.caption.25}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Model of MOSFET with parasitic components\relax }}{14}{figure.caption.26}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Part-schematic of the reference voltage\relax }}{15}{figure.caption.27}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Bode plot of the designed preamplifier and input filter from a small-signal analysis\relax }}{18}{figure.caption.30}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Calculated $f_{\mathrm {sw}}$ and $D$ over different DC levels of $V_{\mathrm {in}}$\relax }}{20}{figure.caption.32}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Bode plot of the designed PI controller from a small-signal analysis\relax }}{23}{figure.caption.35}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces LTspice model of class-D amplifier using ideal components without feedback\relax }}{25}{figure.caption.36}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces LTspice simulation output of openloop configuration\relax }}{25}{figure.caption.37}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Simulated $f_{\mathrm {sw}}$ and $D$ over DC values of $V_{\mathrm {in}}$ with zero amplitude\relax }}{26}{figure.caption.38}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces LTspice model of class-D amplifier using ideal power stage switches with a control loop\relax }}{27}{figure.caption.39}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces LTspice simulation output of closed loop configuration\relax }}{27}{figure.caption.40}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Inductor measurement over the frequency range \SIrange [scientific-notation = engineering]{1000}{35000000}{\hertz }\relax }}{29}{figure.caption.42}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Inductor mounting sketch, not to scale\relax }}{29}{figure.caption.43}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Layout of IO PCB\relax }}{30}{figure.caption.44}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Layout of Amplifier PCB\relax }}{30}{figure.caption.45}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Amplifier after solder work, without output filter inductors\relax }}{31}{figure.caption.46}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Hysteresis window on AIM\relax }}{33}{figure.caption.48}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Output filter parasitic elements, addition of series resistance $R_{\mathrm {ESR}}$\relax }}{34}{figure.caption.51}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Output filter parasitic elements, addition of parallel capacitance $C_{s}$\relax }}{35}{figure.caption.53}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Bode plot of output filter using ideal LC filter, parasitic elements in inductor and parasitic elements in capacitor\relax }}{36}{figure.caption.55}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Block diagram of measurement setup for transformer injection measurement of control loop\relax }}{37}{figure.caption.56}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Breakout board for transformer injection measurement setup\relax }}{38}{figure.caption.57}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Diagram of PI-LQR controller\relax }}{38}{figure.caption.58}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Measurement of frequency response of PI with closed LQR controller with addition of parasitic elements\relax }}{39}{figure.caption.59}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Diagram of PI controller feedback loop\relax }}{39}{figure.caption.60}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Measurement of frequency response of PI with open LQR controller with addition of parasitic elements\relax }}{40}{figure.caption.62}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Estimated transfer functions of PI loop with closed LQR loop\relax }}{41}{figure.caption.63}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Estimation of transfer function of inductor parasitic elements on PI loop with and without LQR loop based on \autoref {fig:bode100_estimated_tf}\relax }}{42}{figure.caption.64}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Diagram of theoretical control loop\relax }}{42}{figure.caption.66}%
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Simulink model of open loop transfer function in control loop\relax }}{43}{figure.caption.67}%
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Comparison of measured transfer function and the theoretically obtained open loop transfer function of the system\relax }}{43}{figure.caption.68}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Schematic of IO Board \cite {multivar_ctrl_loops_for_SM_audio_systems}\relax }}{50}{figure.caption.69}%
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Schematic of Power Stage \cite {multivar_ctrl_loops_for_SM_audio_systems}\relax }}{51}{figure.caption.70}%
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Schematic of Outer Loop \cite {multivar_ctrl_loops_for_SM_audio_systems}\relax }}{52}{figure.caption.71}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Typical measurement set-up of injection transformer in feedback loop from user manual \cite {injection_transformer_manual}\relax }}{53}{figure.caption.72}%
+\contentsline {figure}{\numberline {B.2}{\ignorespaces Typical measurement set-up of Audio Precision APx500 audio analyzer from white paper \cite {apx500_sw_mode_meas}\relax }}{54}{figure.caption.73}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Small signal analysis of output filter\relax }}{55}{figure.caption.74}%
+\contentsline {figure}{\numberline {C.2}{\ignorespaces Small signal analysis of PI controller\relax }}{55}{figure.caption.75}%
+\contentsline {figure}{\numberline {C.3}{\ignorespaces Small signal analysis of output filter parasitic elements\relax }}{56}{figure.caption.76}%
+\contentsline {figure}{\numberline {C.4}{\ignorespaces Bode plot of output filter using ideal LC filter, parasitic elements in capacitor\relax }}{56}{figure.caption.77}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {D.1}{\ignorespaces Amplifier efficiency across a varying output power\relax }}{58}{figure.caption.78}%
+\contentsline {figure}{\numberline {D.2}{\ignorespaces THD+N of amplifier without and with feedback loop\relax }}{59}{figure.caption.79}%
+\contentsline {figure}{\numberline {D.3}{\ignorespaces Control loop figure form Simulink\relax }}{60}{figure.caption.80}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {E.1}{\ignorespaces Simulink model for a PWM generator\relax }}{61}{figure.caption.81}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }

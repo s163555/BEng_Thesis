@@ -1,0 +1,87 @@
+
+
+% Pattern Info
+ 
+\tikzset{
+pattern size/.store in=\mcSize, 
+pattern size = 5pt,
+pattern thickness/.store in=\mcThickness, 
+pattern thickness = 0.3pt,
+pattern radius/.store in=\mcRadius, 
+pattern radius = 1pt}
+\makeatletter
+\pgfutil@ifundefined{pgf@pattern@name@_8hsyz2x1h}{
+\pgfdeclarepatternformonly[\mcThickness,\mcSize]{_8hsyz2x1h}
+{\pgfqpoint{-\mcThickness}{-\mcThickness}}
+{\pgfpoint{\mcSize}{\mcSize}}
+{\pgfpoint{\mcSize}{\mcSize}}
+{
+\pgfsetcolor{\tikz@pattern@color}
+\pgfsetlinewidth{\mcThickness}
+\pgfpathmoveto{\pgfpointorigin}
+\pgfpathlineto{\pgfpoint{0}{\mcSize}}
+\pgfusepath{stroke}
+}}
+\makeatother
+
+% Pattern Info
+ 
+\tikzset{
+pattern size/.store in=\mcSize, 
+pattern size = 5pt,
+pattern thickness/.store in=\mcThickness, 
+pattern thickness = 0.3pt,
+pattern radius/.store in=\mcRadius, 
+pattern radius = 1pt}
+\makeatletter
+\pgfutil@ifundefined{pgf@pattern@name@_k471tnbv3}{
+\pgfdeclarepatternformonly[\mcThickness,\mcSize]{_k471tnbv3}
+{\pgfqpoint{-\mcThickness}{-\mcThickness}}
+{\pgfpoint{\mcSize}{\mcSize}}
+{\pgfpoint{\mcSize}{\mcSize}}
+{
+\pgfsetcolor{\tikz@pattern@color}
+\pgfsetlinewidth{\mcThickness}
+\pgfpathmoveto{\pgfpointorigin}
+\pgfpathlineto{\pgfpoint{0}{\mcSize}}
+\pgfusepath{stroke}
+}}
+\makeatother
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,125); %set diagram left start at 0, and has height of 125
+
+%Shape: Rectangle [id:dp18833028707967348] 
+\draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ] (10,92) -- (140,92) -- (140,102) -- (10,102) -- cycle ;
+%Shape: Circle [id:dp7926791153140256] 
+\draw  [fill={rgb, 255:red, 79; green, 107; blue, 63 }  ,fill opacity=1 ] (40,47) .. controls (40,27.67) and (55.67,12) .. (75,12) .. controls (94.33,12) and (110,27.67) .. (110,47) .. controls (110,66.33) and (94.33,82) .. (75,82) .. controls (55.67,82) and (40,66.33) .. (40,47) -- cycle ;
+%Shape: Rectangle [id:dp9861901382755367] 
+\draw  [pattern=_8hsyz2x1h,pattern size=2.325pt,pattern thickness=0.75pt,pattern radius=0pt, pattern color={rgb, 255:red, 0; green, 0; blue, 0}] (40,92) -- (50,92) -- (50,102) -- (40,102) -- cycle ;
+%Shape: Rectangle [id:dp8283079391334511] 
+\draw  [pattern=_k471tnbv3,pattern size=2.325pt,pattern thickness=0.75pt,pattern radius=0pt, pattern color={rgb, 255:red, 0; green, 0; blue, 0}] (100,92) -- (110,92) -- (110,102) -- (100,102) -- cycle ;
+%Shape: Circle [id:dp9007499783674364] 
+\draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (50,47) .. controls (50,33.19) and (61.19,22) .. (75,22) .. controls (88.81,22) and (100,33.19) .. (100,47) .. controls (100,60.81) and (88.81,72) .. (75,72) .. controls (61.19,72) and (50,60.81) .. (50,47) -- cycle ;
+%Shape: Free Drawing [id:dp6271843413886811] 
+\draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=1.5] [line join = round][line cap = round] (42.5,71) .. controls (48.71,67.9) and (62.69,61.6) .. (51.5,56) ;
+%Shape: Free Drawing [id:dp05242952437084436] 
+\draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=1.5] [line join = round][line cap = round] (38.5,49) .. controls (44.66,49) and (48.38,47.56) .. (53.5,45) ;
+%Shape: Free Drawing [id:dp7113877869069425] 
+\draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=1.5] [line join = round][line cap = round] (46.5,26) .. controls (49.53,28.27) and (54.81,37.69) .. (59.5,33) ;
+%Shape: Free Drawing [id:dp6598413365259324] 
+\draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=1.5] [line join = round][line cap = round] (67.5,13) .. controls (67.5,19.05) and (68.78,25) .. (75.5,25) ;
+%Shape: Free Drawing [id:dp7040403620857618] 
+\draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=1.5] [line join = round][line cap = round] (98.5,21) .. controls (98.5,4.2) and (78.93,27.42) .. (85.5,31) .. controls (88.72,32.76) and (92.83,31) .. (96.5,31) ;
+%Shape: Free Drawing [id:dp338560523548316] 
+\draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=1.5] [line join = round][line cap = round] (112.5,39) .. controls (115.5,39) and (106.45,38.45) .. (103.5,39) .. controls (98.49,39.94) and (91.8,46) .. (101.5,46) ;
+%Shape: Free Drawing [id:dp25756137484802855] 
+\draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=1.5] [line join = round][line cap = round] (95.5,60) .. controls (95.5,58.05) and (93.62,57.76) .. (94.5,56) .. controls (99.41,46.17) and (109.5,58.62) .. (109.5,64) ;
+%Shape: Free Drawing [id:dp5167102379219084] 
+\draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=1.5] [line join = round][line cap = round] (110.5,63) .. controls (110.5,65.33) and (110.79,67.68) .. (110.5,70) .. controls (110.32,71.45) and (106.64,73.34) .. (106.5,76) .. controls (105.89,87.32) and (106.5,98.67) .. (106.5,110) ;
+%Shape: Free Drawing [id:dp9636921436425505] 
+\draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=1.5] [line join = round][line cap = round] (44.5,69) .. controls (40.67,74.75) and (44.14,78.9) .. (44.5,84) .. controls (45.09,92.31) and (44.5,100.67) .. (44.5,109) ;
+
+
+
+
+\end{tikzpicture}

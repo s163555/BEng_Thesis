@@ -1,0 +1,82 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\contentsline {chapter}{Approval}{ii}{section*.2}%
+\contentsline {chapter}{Abstract}{iii}{section*.4}%
+\contentsline {chapter}{Acknowledgements}{iv}{section*.6}%
+\contentsline {chapter}{Abbreviations}{v}{chapter*.7}%
+\contentsline {chapter}{Denotation}{vii}{chapter*.8}%
+\contentsline {chapter}{Contents}{ix}{chapter*.9}%
+\contentsline {chapter}{List of Figures}{xii}{chapter*.10}%
+\contentsline {chapter}{List of Tables}{xiv}{chapter*.11}%
+\contentsline {chapter}{List of Code}{xv}{section*.12}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.0.1}%
+\contentsline {section}{\numberline {1.1}Reading comprehension}{1}{section.0.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Sources}{1}{subsection.0.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Report structure}{1}{subsection.0.1.1.2}%
+\contentsline {section}{\numberline {1.2}Project description}{1}{section.0.1.2}%
+\contentsline {section}{\numberline {1.3}Project scope}{2}{section.0.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Learning objectives}{2}{subsection.0.1.3.1}%
+\contentsline {chapter}{\numberline {2}Theory}{4}{chapter.0.2}%
+\contentsline {section}{\numberline {2.1}Amplifier model}{4}{section.0.2.1}%
+\contentsline {section}{\numberline {2.2}Preamplifier and Input Filter}{5}{section.0.2.2}%
+\contentsline {section}{\numberline {2.3}Modulator}{6}{section.0.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Astable Integrating Modulator}{7}{subsection.0.2.3.1}%
+\contentsline {section}{\numberline {2.4}Gate Driver}{10}{section.0.2.4}%
+\contentsline {section}{\numberline {2.5}Power Stage}{10}{section.0.2.5}%
+\contentsline {section}{\numberline {2.6}Output Filter}{12}{section.0.2.6}%
+\contentsline {section}{\numberline {2.7}Reduced Voltage Switching}{13}{section.0.2.7}%
+\contentsline {section}{\numberline {2.8}Reference Voltage}{15}{section.0.2.8}%
+\contentsline {section}{\numberline {2.9}Regulation and Control}{15}{section.0.2.9}%
+\contentsline {subsection}{\numberline {2.9.1}Proportional-Integral-Derivative Control}{15}{subsection.0.2.9.1}%
+\contentsline {subsection}{\numberline {2.9.2}Linear-Quadratic Regulator}{16}{subsection.0.2.9.2}%
+\contentsline {subsection}{\numberline {2.9.3}Remarks}{16}{subsection.0.2.9.3}%
+\contentsline {chapter}{\numberline {3}Synthesis}{17}{chapter.0.3}%
+\contentsline {section}{\numberline {3.1}Preamplifier and Input Filter}{17}{section.0.3.1}%
+\contentsline {section}{\numberline {3.2}Modulator}{18}{section.0.3.2}%
+\contentsline {section}{\numberline {3.3}Gate Driver}{20}{section.0.3.3}%
+\contentsline {section}{\numberline {3.4}Power Stage}{20}{section.0.3.4}%
+\contentsline {section}{\numberline {3.5}Output Filter}{20}{section.0.3.5}%
+\contentsline {section}{\numberline {3.6}Reference Voltage}{21}{section.0.3.6}%
+\contentsline {section}{\numberline {3.7}Regulation and Control}{22}{section.0.3.7}%
+\contentsline {section}{\numberline {3.8}Remarks}{23}{section.0.3.8}%
+\contentsline {chapter}{\numberline {4}Production}{24}{chapter.0.4}%
+\contentsline {section}{\numberline {4.1}Simulation}{24}{section.0.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Open Loop}{24}{subsection.0.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Closed Loop}{26}{subsection.0.4.1.2}%
+\contentsline {section}{\numberline {4.2}Inductor design}{28}{section.0.4.2}%
+\contentsline {subsubsection}{Measurement}{28}{subsubsection*.41}%
+\contentsline {subsection}{\numberline {4.2.1}Mounting method}{28}{subsection.0.4.2.1}%
+\contentsline {section}{\numberline {4.3}Printed Circuit Board}{30}{section.0.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Input-Output Printed Circuit Board}{30}{subsection.0.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Amplifier Printed Circuit Board}{30}{subsection.0.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Methodology}{31}{subsection.0.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Remarks}{31}{subsection.0.4.3.4}%
+\contentsline {chapter}{\numberline {5}Analysis}{33}{chapter.0.5}%
+\contentsline {section}{\numberline {5.1}Hysteresis window of modulator (Simulation)}{33}{section.0.5.1}%
+\contentsline {section}{\numberline {5.2}Output filter (Calculation and Simulation)}{33}{section.0.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Analytical approach}{33}{subsection.0.5.2.1}%
+\contentsline {subsubsection}{Inductor parasitic ESR}{34}{subsubsection*.50}%
+\contentsline {subsubsection}{Inductor parasitic capacitance}{35}{subsubsection*.52}%
+\contentsline {subsubsection}{Summary}{35}{subsubsection*.54}%
+\contentsline {subsection}{\numberline {5.2.2}Simulation approach}{35}{subsection.0.5.2.2}%
+\contentsline {section}{\numberline {5.3}Initial tests (Hardware)}{36}{section.0.5.3}%
+\contentsline {section}{\numberline {5.4}Control loop (Hardware)}{36}{section.0.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Measurement setup}{36}{subsection.0.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Outer loop open, inner loop closed}{38}{subsection.0.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}Outer loop open, inner loop open}{39}{subsection.0.5.4.3}%
+\contentsline {subsubsection}{Parasitic elements}{40}{subsubsection*.61}%
+\contentsline {subsection}{\numberline {5.4.4}Discussion}{40}{subsection.0.5.4.4}%
+\contentsline {subsubsection}{Theoretical control loop}{41}{subsubsection*.65}%
+\contentsline {chapter}{\numberline {6}Conclusion}{45}{chapter.0.6}%
+\contentsline {section}{\numberline {6.1}Future Work}{45}{section.0.6.1}%
+\contentsline {chapter}{\numberline {7}Bibliography}{46}{chapter.0.7}%
+\contentsline {chapter}{\numberline {A}Circuit Schematics}{49}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Measurement setups}{53}{appendix.B}%
+\contentsline {chapter}{\numberline {C}LTspice}{55}{appendix.C}%
+\contentsline {chapter}{\numberline {D}Amplifier analysis}{58}{appendix.D}%
+\contentsline {section}{\numberline {D.1}Efficiency (Simulation)}{58}{section.D.1}%
+\contentsline {section}{\numberline {D.2}Total Harmonic Distortion + Noise (Hardware)}{59}{section.D.2}%
+\contentsline {section}{\numberline {D.3}Control loop simulation}{59}{section.D.3}%
+\contentsline {chapter}{\numberline {E}MATLAB code}{61}{appendix.E}%
+\contentsline {chapter}{\numberline {F}Bill of Materials}{92}{appendix.F}%
+\contentsline {chapter}{\numberline {G}Instruments}{94}{appendix.G}%

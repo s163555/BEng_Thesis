@@ -1,0 +1,6 @@
+	\draw (0,0) 	node[op amp, noinv input up](opamp){}
+	(opamp.+) to [sV, l_=$V_{\mathrm{in}}$, -] ++(-3,0) node[ground](GND){}
+	(opamp.-) to [tV, l=$V_{\mathrm{carrier}}$, -] ++(-2,0) node[ground](GND){}
+
+	%(opamp.out) to[short] ++(0.2, 0)
+	(opamp.out) to[right,-o] ++(0.2,0) node[right](V_pwm){$V_{\mathrm{pwm}}$};

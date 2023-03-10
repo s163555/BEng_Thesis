@@ -1,0 +1,21 @@
+	% Diode and labels
+	\draw (0,0) node(anode){} to[zD, n=D] (0,3) node(cathode){};
+	\draw (cathode) node[above]{Cathode};
+	\draw (anode) node[below]{Anode};
+	\draw (.19,1.5) node[right]{TLV431};
+	% Load capacitor
+	\draw (cathode) 	to[short, *-] ++(2.5,0) node(CL-north){} 
+						to[C, l=$C_L$] ++(0,-3) 
+						to[short, -*] (anode);
+	% V_O
+	\draw (CL-north) 	to[short,*-o] ++(1,0) node[right]{$V_{\mathrm{ref}}$};
+	% V_ref pin
+	\draw (-0.19, 1.5) 	to[short, -*] (-2.5,1.5) node(VrefIC){}
+						to[short, *-o] ++(-1,0) node[left]{$V_{\mathrm{ref}_{\mathrm{IC}}}$};
+	% Resistor network
+	\draw (cathode)		to[short] ++(-2.5,0) node(V_s){}
+						to[R, l=$R_{A1}$] (VrefIC)
+						to[R, l=$R_{A2}$] ++(0,-1.5)
+						to[short, -*] (anode);
+	% V_s and R_SUP
+	\draw (V_s) to[R, l_=$R_{\mathrm{SUP}}$, *-o] ++(-2,0) node[left]{$V_{s}$};

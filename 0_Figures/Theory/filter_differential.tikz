@@ -1,0 +1,24 @@
+%	% Draw L_ind and R_f
+%	\draw (0,0) 	to[L,l=$L_{ind}$,o-] 		++(2,0)
+%					node(CBTL_N){}
+%					to[short]					++(1.75,0)
+%					to[R,l=$R_{BTL}$]				++(0,-2)
+%					to[short]					++(-1.75,0)
+%					node(CBTL_S){}				++(-2,0)
+%					node(V_sw_)[left]{$\xbar{V_{sw}}$}
+%					to[L,l=$L_{ind}$,-o]		++(2,0);
+%					
+%	% Draw C_f
+%	\draw (CBTL_N)	to[C,l=$C_{BTL}$,*-*]		(CBTL_S);
+%	% Input terminal labels
+%	\draw (0,0)		node()[left]{$V_{sw}$};
+%	% Invisible line for vertical centering
+%	%\draw (V_sw_) to[open] ++(0,-0.6);
+
+\draw (1, -1) coordinate(point1) to[L, l=$L_{\mathrm{ind}}$] (2, -1) to[short, -*] (3, -1) coordinate(point2) to[C, l=$C_{\mathrm{BTL}}$, *-*] (3, -3) coordinate(point3) ;
+\draw (point1) to[short, -o] (0.5, -1) node()[left]{$V_{\mathrm{sw}}$} ;
+\draw (5, -3) coordinate(point4) to[R, l_=$R_{\mathrm{BTL}}$] (5, -1) coordinate(point5) ;
+\draw (point4) to[short, -*] (point3) ;
+\draw (1, -3) coordinate(point6) to[L, l=$L_{\mathrm{ind}}$] (2, -3) to[short, -*] (point3) ;
+\draw (point6) to[short, -o] (0.5, -3) node()[left]{$\xbar{V_{\mathrm{sw}}}$}; ;
+\draw (point2) to[short, *-] (point5) ;

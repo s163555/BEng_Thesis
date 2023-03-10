@@ -1,0 +1,8 @@
+PWD C:/Users/JeppeLaptop/Danmarks Tekniske Universitet/BEng Jeppe audio amplifier control loop - General/TEX/1_Front
+INPUT c:/texlive/2020/texmf.cnf
+INPUT c:/texlive/2020/texmf-dist/web2c/texmf.cnf
+INPUT c:/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT Frontpage.tex
+OUTPUT Frontpage.log
+INPUT c:/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT c:/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm

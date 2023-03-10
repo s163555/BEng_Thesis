@@ -1,0 +1,775 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{ynt/global//global/global}
+    \entry{tlv431}{manual}{}
+      \list{organization}{1}{%
+        {Texas Instruments}%
+      }
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{month}{7}
+      \field{note}{Rev. May 2018}
+      \field{number}{SLVS139X}
+      \field{title}{{TLV431x Low-Voltage Adjustable Precision Shunt Regulator}}
+      \field{year}{1996}
+      \verb{urlraw}
+      \verb www.ti.com/lit/ds/symlink/tlv431.pdf
+      \endverb
+      \verb{url}
+      \verb www.ti.com/lit/ds/symlink/tlv431.pdf
+      \endverb
+    \endentry
+    \entry{apx500_sw_mode_meas}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=7df0005a4235d82b82ccdb0a1949ba63}{%
+           family={Hofer},
+           familyi={H\bibinitperiod},
+           given={Bruce},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Audio Precision}%
+      }
+      \strng{namehash}{7df0005a4235d82b82ccdb0a1949ba63}
+      \strng{fullhash}{7df0005a4235d82b82ccdb0a1949ba63}
+      \strng{bibnamehash}{7df0005a4235d82b82ccdb0a1949ba63}
+      \strng{authorbibnamehash}{7df0005a4235d82b82ccdb0a1949ba63}
+      \strng{authornamehash}{7df0005a4235d82b82ccdb0a1949ba63}
+      \strng{authorfullhash}{7df0005a4235d82b82ccdb0a1949ba63}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{10}
+      \field{note}{Rev. 1}
+      \field{number}{0054.0001}
+      \field{title}{{White Paper: Measuring Switch-mode Power Amplifiers}}
+      \field{year}{2003}
+      \verb{urlraw}
+      \verb www.ap.com/download/measuring-switch-mode-power-amplifiers-2
+      \endverb
+      \verb{url}
+      \verb www.ap.com/download/measuring-switch-mode-power-amplifiers-2
+      \endverb
+    \endentry
+    \entry{self_osc_pwm_modulators_topo_comp}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=d319814c7b31c7c62ef2f1dcb028d0b6}{%
+           family={Poulsen},
+           familyi={P\bibinitperiod},
+           given={{Søren}},
+           giveni={S\bibinitperiod}}}%
+        {{hash=e18c4ece7312e3950eb0a6ac5fd9e9ad}{%
+           family={Andersen},
+           familyi={A\bibinitperiod},
+           given={{Michael A. E.}},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{8ce34a0422f9aa2cc3c308f3d76f9685}
+      \strng{fullhash}{8ce34a0422f9aa2cc3c308f3d76f9685}
+      \strng{bibnamehash}{8ce34a0422f9aa2cc3c308f3d76f9685}
+      \strng{authorbibnamehash}{8ce34a0422f9aa2cc3c308f3d76f9685}
+      \strng{authornamehash}{8ce34a0422f9aa2cc3c308f3d76f9685}
+      \strng{authorfullhash}{8ce34a0422f9aa2cc3c308f3d76f9685}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{High precision control of the output voltage or current of a switch mode converter with fast response is required for a number of applications. Dependent on the type of application, the desired precision and transient response can be difficult, if not impossible, to achieve with standard pulse width modulation (PWM) control caused by limitations in dynamic capabilities which often limits fast tracking of a reference signal, or fast settling during load steps due to too small achievable control loop bandwidth. Achievable open loop bandwidth for standard voltage and current mode PWM modulators is typical in the f/sub s//10 or f/sub s///spl pi/ range respectively, where f/sub s/ is the switching frequency of the converter. For some applications this will require unacceptable high switching frequency to achieve enough control loop bandwidth for the desired dynamic performance. With self oscillating modulators, the open loop bandwidth is equal to f/sub s/ which makes this type of modulators an excellent choice for a wide range of applications. Self oscillating PWM modulators can be made in a number of ways, either as voltage or current mode modulators, and the self oscillating behavior can be achieved either by using hysteresis control or by shaping the open loop function of the modulator so its gain and phase response causes a closed loop natural oscillation. The two main types of self oscillating modulators have many similarities, but differences in dynamic performance and linearity are present. The work presented is related to the author's work with switch mode audio power amplifiers, where linear tracking of the reference signal is of major importance. Use of the modulator topologies presented are not limited to this kind of equipment, but can be used in a very wide range of applications from very low to very high power levels.}
+      \field{booktitle}{Conference Record of the Twenty-Sixth International Power Modulator Symposium, 2004 and 2004 High-Voltage Workshop.}
+      \field{eventday}{23}
+      \field{eventendday}{26}
+      \field{eventendmonth}{5}
+      \field{eventendyear}{2004}
+      \field{eventmonth}{5}
+      \field{eventyear}{2004}
+      \field{isbn}{0-7803-8586-1}
+      \field{title}{Self oscillating PWM modulators, a topological comparison}
+      \field{year}{2004}
+      \field{eventenddateera}{ce}
+      \field{eventdateera}{ce}
+      \field{pages}{403\bibrangedash 407}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1109/MODSYM.2004.1433597
+      \endverb
+    \endentry
+    \entry{simp_PWM_mod_topo_with_excellent_dynamic_behavior}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=d319814c7b31c7c62ef2f1dcb028d0b6}{%
+           family={Poulsen},
+           familyi={P\bibinitperiod},
+           given={{Søren}},
+           giveni={S\bibinitperiod}}}%
+        {{hash=e18c4ece7312e3950eb0a6ac5fd9e9ad}{%
+           family={Andersen},
+           familyi={A\bibinitperiod},
+           given={{Michael A. E.}},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{8ce34a0422f9aa2cc3c308f3d76f9685}
+      \strng{fullhash}{8ce34a0422f9aa2cc3c308f3d76f9685}
+      \strng{bibnamehash}{8ce34a0422f9aa2cc3c308f3d76f9685}
+      \strng{authorbibnamehash}{8ce34a0422f9aa2cc3c308f3d76f9685}
+      \strng{authornamehash}{8ce34a0422f9aa2cc3c308f3d76f9685}
+      \strng{authorfullhash}{8ce34a0422f9aa2cc3c308f3d76f9685}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper proposes a new PWM modulator topology. The modulator is used in switch mode audio power amplifiers, but the topology can be used in a wide range of applications. Due to excellent transient behavior, the modulator is very suited for VRMs or other types of DC-DC or DC-AC applications.}
+      \field{booktitle}{APEC 2004 – Nineteenth Annual IEEE Applied Power Electronics Conference and Exposition}
+      \field{eventday}{22}
+      \field{eventendday}{26}
+      \field{eventendmonth}{2}
+      \field{eventendyear}{2004}
+      \field{eventmonth}{2}
+      \field{eventyear}{2004}
+      \field{isbn}{0-7803-8270-6}
+      \field{title}{Simple PWM modulator topology with excellent dynamic behavior}
+      \field{volume}{1}
+      \field{year}{2004}
+      \field{eventenddateera}{ce}
+      \field{eventdateera}{ce}
+      \field{pages}{486\bibrangedash 492}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/APEC.2004.1295852
+      \endverb
+    \endentry
+    \entry{putzey_simple_self_osc_amp_filter_control}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=71d7cda1ac981dd6a3d0df849479de6a}{%
+           family={Putzeys},
+           familyi={P\bibinitperiod},
+           given={{Bruno}},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{publisher}{1}{%
+        {Audio Engineering Society}%
+      }
+      \strng{namehash}{71d7cda1ac981dd6a3d0df849479de6a}
+      \strng{fullhash}{71d7cda1ac981dd6a3d0df849479de6a}
+      \strng{bibnamehash}{71d7cda1ac981dd6a3d0df849479de6a}
+      \strng{authorbibnamehash}{71d7cda1ac981dd6a3d0df849479de6a}
+      \strng{authornamehash}{71d7cda1ac981dd6a3d0df849479de6a}
+      \strng{authorfullhash}{71d7cda1ac981dd6a3d0df849479de6a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A stable and load-invariant self-oscillation condition is developed for a class D amplifier employing only one single voltage feedback loop taking off after the output filter. The resulting control method is shown to effectively remove the output filter from the closed loop response. Practical discrete implementations of a comparator and gate-drive circuit are presented. A high-performance class D amplifier employing only 14 discrete transistors is constructed. Higher-order extensions of the control circuit are demonstrated which produce extremely low levels of distortion.}
+      \field{booktitle}{Proceedings of the 118th Audio Engineering Convention Convention}
+      \field{eventday}{28}
+      \field{eventendday}{31}
+      \field{eventendmonth}{5}
+      \field{eventendyear}{2005}
+      \field{eventmonth}{5}
+      \field{eventyear}{2005}
+      \field{journaltitle}{A E S}
+      \field{month}{05}
+      \field{title}{Simple Self-Oscillating Class D Amplifier with Full Output Filter Control}
+      \field{year}{2005}
+      \field{eventenddateera}{ce}
+      \field{eventdateera}{ce}
+    \endentry
+    \entry{design_diff_filters_ti}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=9ccc28d55dd7c5723eaf1bd5b53eca53}{%
+           family={Chan},
+           familyi={C\bibinitperiod},
+           given={{Ken}},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Texas Instruments}%
+      }
+      \strng{namehash}{9ccc28d55dd7c5723eaf1bd5b53eca53}
+      \strng{fullhash}{9ccc28d55dd7c5723eaf1bd5b53eca53}
+      \strng{bibnamehash}{9ccc28d55dd7c5723eaf1bd5b53eca53}
+      \strng{authorbibnamehash}{9ccc28d55dd7c5723eaf1bd5b53eca53}
+      \strng{authornamehash}{9ccc28d55dd7c5723eaf1bd5b53eca53}
+      \strng{authorfullhash}{9ccc28d55dd7c5723eaf1bd5b53eca53}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{10}
+      \field{note}{Rev. April 2010}
+      \field{number}{SLWA053B}
+      \field{title}{{Design of Differential Filters for High-Speed Signal Chains}}
+      \field{year}{2007}
+      \verb{urlraw}
+      \verb www.ti.com/lit/an/slwa053b/slwa053b.pdf
+      \endverb
+      \verb{url}
+      \verb www.ti.com/lit/an/slwa053b/slwa053b.pdf
+      \endverb
+    \endentry
+    \entry{micrometals}{manual}{}
+      \list{organization}{1}{%
+        {MICROMETALS, Inc.}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{month}{2}
+      \field{title}{MICROMETALS IRON POWDER CORES FOR POWER CONVERSION CATALOG - ISSUE L 2007}
+      \field{year}{2007}
+      \verb{urlraw}
+      \verb s3.amazonaws.com/micrometals-production/filer_public/db/fc/dbfcb8b9-c083-4857-8b21-66e8c4ce60c7/mm_pc_catalog_2007.pdf
+      \endverb
+      \verb{url}
+      \verb s3.amazonaws.com/micrometals-production/filer_public/db/fc/dbfcb8b9-c083-4857-8b21-66e8c4ce60c7/mm_pc_catalog_2007.pdf
+      \endverb
+    \endentry
+    \entry{apx500_user_manual}{manual}{}
+      \list{organization}{1}{%
+        {Audio Precision}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{month}{6}
+      \field{note}{Rev. 034 (November 2019)}
+      \field{number}{8211.0238}
+      \field{title}{{APx500 User's Manual}}
+      \field{year}{2008}
+      \verb{urlraw}
+      \verb www.ap.com/download/apx500-user-manual-2
+      \endverb
+      \verb{url}
+      \verb www.ap.com/download/apx500-user-manual-2
+      \endverb
+    \endentry
+    \entry{sw_freq_variations_and_EMI_prop_in_selfosc_classD_amps}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=91d2554b946a8c0828c2fe773e8d0798}{%
+           family={Nielsen},
+           familyi={N\bibinitperiod},
+           given={{Dennis}},
+           giveni={D\bibinitperiod}}}%
+        {{hash=32f720ecdc2f65ea8240797e3bd8ec40}{%
+           family={Knott},
+           familyi={K\bibinitperiod},
+           given={{Arnold}},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d0e6445f762b5af053b058449b4ebfc9}{%
+           family={Pfaffinger},
+           familyi={P\bibinitperiod},
+           given={{Gerhard}},
+           giveni={G\bibinitperiod}}}%
+        {{hash=e18c4ece7312e3950eb0a6ac5fd9e9ad}{%
+           family={Andersen},
+           familyi={A\bibinitperiod},
+           given={{Michael A. E.}},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{publisher}{1}{%
+        {AES}%
+      }
+      \strng{namehash}{44e1a40ec9fa966f6859feb3c4f6eeec}
+      \strng{fullhash}{95fde731d9ab89099af5a04c598a0116}
+      \strng{bibnamehash}{95fde731d9ab89099af5a04c598a0116}
+      \strng{authorbibnamehash}{95fde731d9ab89099af5a04c598a0116}
+      \strng{authornamehash}{44e1a40ec9fa966f6859feb3c4f6eeec}
+      \strng{authorfullhash}{95fde731d9ab89099af5a04c598a0116}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Class D audio amplifiers have gained significant influence in sound reproduction due to their high efficiency. One of the most commonly used control methods in these amplifiers is self-oscillation. A parameter of key interest in self-oscillating amplifiers is the switching frequency, which is known for its variation. Knowledge of switching frequency variations is of great importance with respect to electromagnetic interference (EMI). This paper will investigate, whether the switching frequency is depended on modulation index and audio reference frequency. Validation is done using simulations, and the results are compared with measurements performed on a 50 W prototype amplifier. The switching frequency is tracked through accurate spectrum measurements, and very good compliance with simulation results are observed.}
+      \field{booktitle}{Proceedings of the 127th AES Convention}
+      \field{eventday}{9}
+      \field{eventendday}{12}
+      \field{eventendmonth}{10}
+      \field{eventendyear}{2009}
+      \field{eventmonth}{10}
+      \field{eventyear}{2009}
+      \field{isbn}{978-0-937803-71-4}
+      \field{title}{Investigation of switching frequency variations and EMI properties in self-oscillating class D amplifiers}
+      \field{year}{2009}
+      \field{eventenddateera}{ce}
+      \field{eventdateera}{ce}
+      \verb{urlraw}
+      \verb http://www.aes.org/events/127/
+      \endverb
+      \verb{url}
+      \verb http://www.aes.org/events/127/
+      \endverb
+    \endentry
+    \entry{lm5113}{manual}{}
+      \list{organization}{1}{%
+        {Texas Instruments}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{month}{6}
+      \field{note}{Rev. April 2013}
+      \field{number}{SNVS725F}
+      \field{title}{{LM5113 5A, 100V Half-Bridge Gate Driver for Enhancement Mode GaN FETs}}
+      \field{year}{2011}
+      \verb{urlraw}
+      \verb www.ti.com/lit/ds/symlink/lm5113.pdf
+      \endverb
+      \verb{url}
+      \verb www.ti.com/lit/ds/symlink/lm5113.pdf
+      \endverb
+    \endentry
+    \entry{BSZ097N10NS5}{manual}{}
+      \list{organization}{1}{%
+        {Infineon Technologies}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{month}{5}
+      \field{note}{Rev. November 2020}
+      \field{number}{BSZ097N10NS5}
+      \field{title}{{MOSFET OptiMOS™5 Power-Transistor}}
+      \field{year}{2014}
+      \verb{urlraw}
+      \verb www.infineon.com/dgdl/Infineon-BSZ097N10NS5-DS-v02_03-EN.pdf?fileId=5546d461454603990145d5a1b051648d
+      \endverb
+      \verb{url}
+      \verb www.infineon.com/dgdl/Infineon-BSZ097N10NS5-DS-v02_03-EN.pdf?fileId=5546d461454603990145d5a1b051648d
+      \endverb
+    \endentry
+    \entry{Comp_Simp_selfosc_PWM_mod}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=9bc1f952f8f7bba1cadc941f48d84a81}{%
+           family={Dahl},
+           familyi={D\bibinitperiod},
+           given={{Nicolai J.}},
+           giveni={N\bibinitperiod}}}%
+        {{hash=3714d4d029ae6cc55abfcee8d232692b}{%
+           family={Iversen},
+           familyi={I\bibinitperiod},
+           given={{Niels Elkj{æ}r}},
+           giveni={N\bibinitperiod}}}%
+        {{hash=32f720ecdc2f65ea8240797e3bd8ec40}{%
+           family={Knott},
+           familyi={K\bibinitperiod},
+           given={Arnold},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e18c4ece7312e3950eb0a6ac5fd9e9ad}{%
+           family={Andersen},
+           familyi={A\bibinitperiod},
+           given={{Michael A. E.}},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{publisher}{1}{%
+        {Audio Engineering Society}%
+      }
+      \strng{namehash}{666878d6006d20a6ad54e0ecc92ceb41}
+      \strng{fullhash}{0378a05bae5ef9a3878bccd20e896945}
+      \strng{bibnamehash}{0378a05bae5ef9a3878bccd20e896945}
+      \strng{authorbibnamehash}{0378a05bae5ef9a3878bccd20e896945}
+      \strng{authornamehash}{666878d6006d20a6ad54e0ecc92ceb41}
+      \strng{authorfullhash}{0378a05bae5ef9a3878bccd20e896945}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Switch-mode power amplifiers has become the conventional choice for audio applications due to their superior efficiency and excellent audio performance. These amplifiers rely on high frequency modulation of the audio input. Conventional modulators use a fixed high frequency for modulation. Self-oscillating modulators do not have a fixed modulation frequency and can provide good audio performance with very simple circuitry. This paper proposes a new type of self-oscillating modulator. The proposed modulator is compared to an already existing modulator of similar type and their performances are compared both theoretically and experimentally. The result shows that the proposed modulator provides a higher degree of linearity resulting in around 2\% lower Total Harmonic Distortion (THD).}
+      \field{booktitle}{Proceedings of the 140th Audio Engineering Convention Convention}
+      \field{eventday}{4}
+      \field{eventendday}{7}
+      \field{eventendmonth}{6}
+      \field{eventendyear}{2016}
+      \field{eventmonth}{6}
+      \field{eventyear}{2016}
+      \field{title}{Comparison of Simple Self-Oscillating PWM Modulators}
+      \field{year}{2016}
+      \field{eventenddateera}{ce}
+      \field{eventdateera}{ce}
+    \endentry
+    \entry{bode100_manual}{manual}{}
+      \list{organization}{1}{%
+        {OMICRON Lab}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{number}{ENU1006 05 03}
+      \field{title}{{Bode 100 User Manual}}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb www.omicron-lab.com/fileadmin/assets/Bode_100/Manuals/Bode-100-User-Manual-ENU10060503.pdf
+      \endverb
+      \verb{url}
+      \verb www.omicron-lab.com/fileadmin/assets/Bode_100/Manuals/Bode-100-User-Manual-ENU10060503.pdf
+      \endverb
+    \endentry
+    \entry{multivar_ctrl_loops_for_SM_audio_systems}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=9bc1f952f8f7bba1cadc941f48d84a81}{%
+           family={Dahl},
+           familyi={D\bibinitperiod},
+           given={{Nicolai J.}},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Department of Electrical Engineering, Technical University of Denmark}%
+      }
+      \strng{namehash}{9bc1f952f8f7bba1cadc941f48d84a81}
+      \strng{fullhash}{9bc1f952f8f7bba1cadc941f48d84a81}
+      \strng{bibnamehash}{9bc1f952f8f7bba1cadc941f48d84a81}
+      \strng{authorbibnamehash}{9bc1f952f8f7bba1cadc941f48d84a81}
+      \strng{authornamehash}{9bc1f952f8f7bba1cadc941f48d84a81}
+      \strng{authorfullhash}{9bc1f952f8f7bba1cadc941f48d84a81}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{7}
+      \field{title}{Multivariable Control Loops For Switch-Mode Audio Systems}
+      \field{type}{Master Thesis}
+      \field{year}{2018}
+      \field{dateera}{ce}
+    \endentry
+    \entry{optimal_ctrl_hf_classd_amp}{article}{}
+      \name{author}{4}{}{%
+        {{hash=9bc1f952f8f7bba1cadc941f48d84a81}{%
+           family={Dahl},
+           familyi={D\bibinitperiod},
+           given={{Nicolai J.}},
+           giveni={N\bibinitperiod}}}%
+        {{hash=3714d4d029ae6cc55abfcee8d232692b}{%
+           family={Iversen},
+           familyi={I\bibinitperiod},
+           given={{Niels Elkj{æ}r}},
+           giveni={N\bibinitperiod}}}%
+        {{hash=32f720ecdc2f65ea8240797e3bd8ec40}{%
+           family={Knott},
+           familyi={K\bibinitperiod},
+           given={{Arnold}},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e18c4ece7312e3950eb0a6ac5fd9e9ad}{%
+           family={Andersen},
+           familyi={A\bibinitperiod},
+           given={{Michael A. E.}},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{publisher}{1}{%
+        {Audio Engineering Society}%
+      }
+      \strng{namehash}{666878d6006d20a6ad54e0ecc92ceb41}
+      \strng{fullhash}{0378a05bae5ef9a3878bccd20e896945}
+      \strng{bibnamehash}{0378a05bae5ef9a3878bccd20e896945}
+      \strng{authorbibnamehash}{0378a05bae5ef9a3878bccd20e896945}
+      \strng{authornamehash}{666878d6006d20a6ad54e0ecc92ceb41}
+      \strng{authorfullhash}{0378a05bae5ef9a3878bccd20e896945}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Control loops have been used with switch-mode audio amplifiers to improve the sound quality of the amplifier. Because these amplifiers use a high-frequency modulation, precautions in the controller design must be taken. Further, the quality factor of the output filter can have a great impact on the controller's capabilities to suppress noise and track the audio signal. In this paper design methods for modern control are presented. The control method proves to easily overcome the challenge of designing a good performing controller when the output filter has a high quality factor. The results show that the controller is able to produce a clear improvement in the Total Harmonic Distortion with up to a 30 times improvement compared to open-loop with a clear reduction in the noise. This places the audio quality on pair with current solutions.}
+      \field{issn}{1549-4950}
+      \field{journaltitle}{Journal of the Audio Engineering Society}
+      \field{month}{1}
+      \field{number}{1-2}
+      \field{title}{Optimal control of a high-frequency class-D amplifier}
+      \field{volume}{66}
+      \field{year}{2018}
+      \field{pages}{34\bibrangedash 43}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.17743/jaes.2017.0046
+      \endverb
+    \endentry
+    \entry{onsemi_boostrap}{manual}{}
+      \list{organization}{1}{%
+        {ON Semiconductor}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{month}{1}
+      \field{note}{Rev. 2}
+      \field{number}{AND9674/D}
+      \field{title}{{Design and Application Guide of Bootstrap Circuit for High-Voltage Gate-Drive IC}}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb www.onsemi.com/pub/Collateral/AND9674-D.PDF
+      \endverb
+      \verb{url}
+      \verb www.onsemi.com/pub/Collateral/AND9674-D.PDF
+      \endverb
+    \endentry
+    \entry{injection_transformer_manual}{manual}{}
+      \list{organization}{1}{%
+        {OMICRON Lab}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{number}{ENU1189 05 04}
+      \field{title}{{Injection Transformer User Manual B-WIT 100}}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb www.omicron-lab.com/fileadmin/assets/Bode_100/Accessories/B-WIT_100/B-WIT-B-LFT-User-Manual-ENU11890504.pdf
+      \endverb
+      \verb{url}
+      \verb www.omicron-lab.com/fileadmin/assets/Bode_100/Accessories/B-WIT_100/B-WIT-B-LFT-User-Manual-ENU11890504.pdf
+      \endverb
+    \endentry
+    \entry{towards_higher_power_density_amplifiers}{article}{}
+      \name{author}{4}{}{%
+        {{hash=a0f5c79daa370d72fea71c87ddbddeaf}{%
+           family={Iversen},
+           familyi={I\bibinitperiod},
+           given={{Niels E.}},
+           giveni={N\bibinitperiod}}}%
+        {{hash=9bc1f952f8f7bba1cadc941f48d84a81}{%
+           family={Dahl},
+           familyi={D\bibinitperiod},
+           given={{Nicolai J.}},
+           giveni={N\bibinitperiod}}}%
+        {{hash=32f720ecdc2f65ea8240797e3bd8ec40}{%
+           family={Knott},
+           familyi={K\bibinitperiod},
+           given={{Arnold}},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e18c4ece7312e3950eb0a6ac5fd9e9ad}{%
+           family={Andersen},
+           familyi={A\bibinitperiod},
+           given={{Michael A. E.}},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Audio Engineering Society}%
+      }
+      \strng{namehash}{29801d66971de1be6da939af5dc81a0d}
+      \strng{fullhash}{1552ac7e5898069966acd9f5a139aa0f}
+      \strng{bibnamehash}{1552ac7e5898069966acd9f5a139aa0f}
+      \strng{authorbibnamehash}{1552ac7e5898069966acd9f5a139aa0f}
+      \strng{authornamehash}{29801d66971de1be6da939af5dc81a0d}
+      \strng{authorfullhash}{1552ac7e5898069966acd9f5a139aa0f}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper proposes a new switching strategy for switch-mode power audio ampliﬁers beneﬁcial for the power dissipation in the switching devices of the power stage. The strategy is based on a thorough analysis of the loss mechanism and operating conditions of the power stage and how they relate to the audio input. The strategy utilizes a high ripple current combined with full state control improve soft switching capabilities. This result in a shift of losses from switching devices to ﬁlter inductors which are less sensitive to loss variations due to a larger form factor. Measured results on 100 W test ampliﬁers show that the proposed strategy reduces the power dissipation within the switches causing up to 45◦C temperature reduction locally in the switches and up to 35◦C globally in the ampliﬁer. THD+N levels are down to 0.03\% and power density of implemented ampliﬁers are 6 W/cm3.}
+      \field{issn}{1549-4950}
+      \field{journaltitle}{Journal of the Audio Engineering Society}
+      \field{month}{12}
+      \field{number}{12}
+      \field{title}{Towards higher power density amplifiers}
+      \field{volume}{66}
+      \field{year}{2018}
+      \field{pages}{1051\bibrangedash 1061}
+      \range{pages}{11}
+      \verb{doi}
+      \verb https://doi.org/10.17743/jaes.2018.0064
+      \endverb
+    \endentry
+    \entry{ltspice2matlab}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=ebfdee7a7777a21de8f60234e7037881}{%
+           family={Feicht},
+           familyi={F\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {GitHub}%
+      }
+      \strng{namehash}{ebfdee7a7777a21de8f60234e7037881}
+      \strng{fullhash}{ebfdee7a7777a21de8f60234e7037881}
+      \strng{bibnamehash}{ebfdee7a7777a21de8f60234e7037881}
+      \strng{authorbibnamehash}{ebfdee7a7777a21de8f60234e7037881}
+      \strng{authornamehash}{ebfdee7a7777a21de8f60234e7037881}
+      \strng{authorfullhash}{ebfdee7a7777a21de8f60234e7037881}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{http://github.com/PeterFeicht/ltspice2matlab}}
+      \field{journaltitle}{GitHub repository}
+      \field{month}{3}
+      \field{title}{{LTSpice2Matlab}}
+      \field{year}{2019}
+    \endentry
+    \entry{matlab_control_toolbox}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=00d71d324b02d94dfdd025d41fb8ce51}{%
+           family={{MathWorks, Inc.}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {MathWorks, Inc.}%
+      }
+      \strng{namehash}{00d71d324b02d94dfdd025d41fb8ce51}
+      \strng{fullhash}{00d71d324b02d94dfdd025d41fb8ce51}
+      \strng{bibnamehash}{00d71d324b02d94dfdd025d41fb8ce51}
+      \strng{authorbibnamehash}{00d71d324b02d94dfdd025d41fb8ce51}
+      \strng{authornamehash}{00d71d324b02d94dfdd025d41fb8ce51}
+      \strng{authorfullhash}{00d71d324b02d94dfdd025d41fb8ce51}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Website}
+      \field{month}{12}
+      \field{title}{{Control System Toolbox}}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb www.mathworks.com/products/control.html
+      \endverb
+      \verb{url}
+      \verb www.mathworks.com/products/control.html
+      \endverb
+    \endentry
+    \entry{nagy_special_course}{report}{}
+      \name{author}{1}{}{%
+        {{hash=6cf13e817bc591705f930f22142ee433}{%
+           family={Nagy},
+           familyi={N\bibinitperiod},
+           given={{Bálint}},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {DTU Department of Electrical Engineering}%
+      }
+      \strng{namehash}{6cf13e817bc591705f930f22142ee433}
+      \strng{fullhash}{6cf13e817bc591705f930f22142ee433}
+      \strng{bibnamehash}{6cf13e817bc591705f930f22142ee433}
+      \strng{authorbibnamehash}{6cf13e817bc591705f930f22142ee433}
+      \strng{authornamehash}{6cf13e817bc591705f930f22142ee433}
+      \strng{authorfullhash}{6cf13e817bc591705f930f22142ee433}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In the following document an improved PCB design is proposed for a self-oscillating D-class amplifier. Besides the PCB design, a new output filter has been also designed and detailed in the relevant section. The document includes the power stage’s component value calculation, and a more cost effective BOM with which the PCB board’s current physical dimensions remain the same besides the amplifier relevant attributes like output power and distortion.}
+      \field{month}{5}
+      \field{title}{Low-Noise Class-D Amplifier Design}
+      \field{type}{Special Course}
+      \field{year}{2020}
+      \field{dateera}{ce}
+    \endentry
+    \entry{n4l_analyzer}{manual}{}
+      \list{organization}{1}{%
+        {Newtons4th Ltd}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{month}{10}
+      \field{note}{v2.24}
+      \field{number}{D000175}
+      \field{title}{{PSM1735 User Manual}}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb www.newtons4th.com/wp-content/uploads/2010/03/PSM1735-User-Manual-v1_48.pdf
+      \endverb
+      \verb{url}
+      \verb www.newtons4th.com/wp-content/uploads/2010/03/PSM1735-User-Manual-v1_48.pdf
+      \endverb
+    \endentry
+    \entry{soren_simonsen}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=064610a6606321974dd5f8a41d5012dd}{%
+           family={Simonsen},
+           familyi={S\bibinitperiod},
+           given={Søren},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Technical University of Denmark}%
+      }
+      \list{location}{1}{%
+        {Elektrovej, Building 325}%
+      }
+      \strng{namehash}{064610a6606321974dd5f8a41d5012dd}
+      \strng{fullhash}{064610a6606321974dd5f8a41d5012dd}
+      \strng{bibnamehash}{064610a6606321974dd5f8a41d5012dd}
+      \strng{authorbibnamehash}{064610a6606321974dd5f8a41d5012dd}
+      \strng{authornamehash}{064610a6606321974dd5f8a41d5012dd}
+      \strng{authorfullhash}{064610a6606321974dd5f8a41d5012dd}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{howpublished}{Private communication}
+      \field{note}{Talked about derived expressions of AIM circuits and reduced voltage switching}
+      \field{year}{2020}
+    \endentry
+    \entry{matlab_sysident_toolbox}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=00d71d324b02d94dfdd025d41fb8ce51}{%
+           family={{MathWorks, Inc.}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {MathWorks, Inc.}%
+      }
+      \strng{namehash}{00d71d324b02d94dfdd025d41fb8ce51}
+      \strng{fullhash}{00d71d324b02d94dfdd025d41fb8ce51}
+      \strng{bibnamehash}{00d71d324b02d94dfdd025d41fb8ce51}
+      \strng{authorbibnamehash}{00d71d324b02d94dfdd025d41fb8ce51}
+      \strng{authornamehash}{00d71d324b02d94dfdd025d41fb8ce51}
+      \strng{authorfullhash}{00d71d324b02d94dfdd025d41fb8ce51}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Website}
+      \field{month}{1}
+      \field{title}{{System Identification Toolbox}}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb www.mathworks.com/products/sysid.html
+      \endverb
+      \verb{url}
+      \verb www.mathworks.com/products/sysid.html
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

@@ -1,0 +1,77 @@
+%\begin{circuitikz} [>=Triangle]
+% MIDDLE
+%\begin{scope} %[blue]
+%	% Resistor
+%	\draw (-1,0) node[](left_R){} to[R,l=$R_{BTL}$] (1,0) node[](right_R){};
+%	% Filter cap
+%	\draw (left_R) 	node[circ]{}	to[short] 	++(0,-1.5) 	node(left_C){};
+%	\draw (right_R) node[circ]{} 	to[short]	++(0,-1.5) 	node(right_C){};
+%	\draw (left_C) to[C,l=$C_{BTL}$] (right_C);
+%	% Left inductor
+%	\draw (left_R)
+%	++(-2,0) node[](left_L){}
+%	to[L,l=$L_{ind}$] (left_R);
+%	% Right inductor
+%	\draw (right_R)
+%	to[L,l=$L_{ind}$] ++(2,0) node[](right_L){};
+%\end{scope}
+%% LEFT SIDE
+%\begin{scope} %[red]
+%	% Top FET
+%	\draw (left_L) 
+%	to[Tnmos,n=T1] ++(0,3) node[tground](left_VD){} node[above]{$V_{DD}$};
+%	\draw (T1.G) node[left]{$q$} ++(+1.2,0) node[]{$Q_1$};
+%	% Bottom FET
+%	\draw (left_L) ++(0,-3)
+%	node[tlground](left_VS){} %node[below]{$V_S$}
+%	to[Tnmos,n=T2] ++(0,3) node[circ]{};
+%	\draw (T2.G) node[left]{$\bar{q}$} ++(+1.2,0) node[]{$Q_2$};
+%\end{scope}
+%% RIGHT SIDE
+%\begin{scope} %[green]
+%	% Top FET
+%	\draw (right_L) 
+%	to[Tnmos,mirror,n=T3] ++(0,3) node[tground](right_VD){} node[above]{$V_{DD}$};
+%	\draw (T3.G) node[right]{$\bar{q}$} ++(-1.2,0) node[]{$Q_3$};
+%	% Bottom FET
+%	\draw (right_L) ++(0,-3)
+%	node[tlground](right_VS){} %node[below]{$V_S$}
+%	to[Tnmos,mirror,n=T4] ++(0,3) node[circ]{};
+%	\draw (T4.G) node[right]{$q$} ++(-1.2,0) node[]{$Q_4$};
+%\end{scope}
+
+%\draw (9.00, -5.77) node[nmos, rotate=180](nmos1){};
+%\draw (9.00, -2.23) node[nmos, rotate=180](nmos2){};
+%\draw (3.00, -5.77) node[nmos](nmos3){};
+%\draw (3.00, -2.23) node[nmos](nmos4){};
+%\draw (nmos1.E) to[short, -*] ++(0, 1) coordinate(point1) to[short, *-] (nmos2.C) ;
+%\draw (nmos1.B) to[short, -o] (10.3, -5.77) node[right]{$q$};
+%\draw (nmos1.C) node[ground]{} ;
+%\draw (nmos2.B) to[short, -o] (10.3, -2.23) node[right]{$\bar{q}$};
+%\draw (nmos2.E) node[vcc]{} node[above, yshift=0.3cm]{$V_{\mathrm{DD}}$};
+%\draw (nmos3.B) to[short, -o] (1.7, -5.77) node[left]{$\bar{q}$};
+%\draw (nmos3.E) node[ground]{} ;
+%\draw (nmos4.E) to[short] (nmos3.C) ;
+%\draw (nmos4.B) to[short, -o] (1.7, -2.23) node[left]{$q$};
+%\draw (nmos4.C) node[vcc]{} node[above, yshift=0.3cm]{$V_{\mathrm{DD}}$};
+%\draw (3, -4) to[L, l={$L_{\mathrm{ind1}}$}, *-*] ++(2, 0) coordinate(point2) to[R, l=$R_{\mathrm{BTL}}$, *-] ++(2, 0) coordinate(point3) to[L, l=$L_{\mathrm{ind2}}$, -*] (point1) ;
+%\draw (point2) to[short, *-] ++(0, -1) to[C, l_=$C_{\mathrm{BTL}}$] ++(2, 0) coordinate(point4) ;
+%\draw (point3) to[short, *-] (point4) ;
+
+\draw (9.00, -5.77) node[nmos, rotate=180](nmos1){} ++(-0.5,0) node[]{$Q_4$}; %Q4
+\draw (9.00, -2.23) node[nmos, rotate=180](nmos2){} ++(-0.5,0) node[]{$Q_3$}; %Q3
+\draw (3.00, -5.77) node[nmos](nmos3){} ++(+0.5,0) node[]{$Q_2$}; %Q2
+\draw (3.00, -2.23) node[nmos](nmos4){} ++(+0.5,0) node[]{$Q_1$}; %Q1
+\draw (nmos1.B) to[short, -o] (10.3, -5.77) node[right]{$q$};
+\draw (nmos1.E) to[short] (nmos2.C) ;
+\draw (nmos1.C) node[ground]{} ;
+\draw (nmos2.B) to[short, -o] (10.3, -2.23) node[right]{$\bar{q}$};
+\draw (nmos2.E) node[vcc]{} node[above, yshift=0.35cm]{$V_{\mathrm{DD}}$};
+\draw (nmos3.B) to[short, -o] (1.7, -5.77) node[left]{$\bar{q}$};
+\draw (nmos3.E) node[ground]{} ;
+\draw (nmos4.E) to[short] (nmos3.C) ;
+\draw (nmos4.B) to[short, -o] (1.7, -2.23) node[left]{$q$};
+\draw (nmos4.C) node[vcc]{} node[above, yshift=0.35cm]{$V_{\mathrm{DD}}$};
+\draw (3, -4) to[L, l=$L_{\mathrm{ind}}$, *-*] ++(2, 0) coordinate(point1) to[R, l=$R_{\mathrm{BTL}}$, *-*] ++(2, 0) coordinate(point2) to[short, *-] ++(0, -1) coordinate(point3) ;
+\draw (point1) to[short, *-] ++(0, -1) to[C, l_=$C_{\mathrm{BTL}}$] (point3) ;
+\draw (point2) to[L, l=$L_{\mathrm{ind}}$, *-*] ++(2, 0) ;

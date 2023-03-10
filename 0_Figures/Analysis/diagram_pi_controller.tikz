@@ -1,0 +1,68 @@
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,888); %set diagram left start at 0, and has height of 888
+
+%Shape: Triangle [id:dp7532010602447068] 
+\draw   (298,45) -- (243,80) -- (243,10) -- cycle ;
+
+%Shape: Triangle [id:dp15332581012771063] 
+\draw   (222,155) -- (262,135) -- (262,175) -- cycle ;
+%Straight Lines [id:da5523748626192453] 
+\draw    (119,45) -- (140,45) ;
+\draw [shift={(143,45)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Straight Lines [id:da3339718462186836] 
+\draw    (163,45) -- (185,45) ;
+\draw [shift={(188,45)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Straight Lines [id:da31791499009589597] 
+\draw    (223,45) -- (240,45) ;
+\draw [shift={(243,45)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Straight Lines [id:da5170788170117406] 
+\draw    (298,45) -- (320,45) ;
+\draw [shift={(323,45)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Straight Lines [id:da8953286633069386] 
+\draw    (363,45) -- (385,45) ;
+\draw [shift={(388,45)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Straight Lines [id:da8861023692104835] 
+\draw    (418,55) -- (418,155) -- (265,155) ;
+\draw [shift={(262,155)}, rotate = 360] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Straight Lines [id:da16951160745617155] 
+\draw    (222,155) -- (105,155) -- (105,63) ;
+\draw [shift={(105,60)}, rotate = 450] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Straight Lines [id:da9897349414536416] 
+\draw    (61.35,45) -- (86,45) ;
+\draw [shift={(89,45)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+\draw [shift={(59,45)}, rotate = 0] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+%Shape: Circle [id:dp16935813826192136] 
+\draw   (90,45) .. controls (90,36.72) and (96.72,30) .. (105,30) .. controls (113.28,30) and (120,36.72) .. (120,45) .. controls (120,53.28) and (113.28,60) .. (105,60) .. controls (96.72,60) and (90,53.28) .. (90,45) -- cycle ;
+
+
+% Text Node
+\draw    (143,33) -- (165,33) -- (165,57) -- (143,57) -- cycle  ;
+\draw (146,37) node [anchor=north west][inner sep=0.75pt]   [align=left] {PI};
+% Text Node
+\draw    (186,33) -- (221,33) -- (221,57) -- (186,57) -- cycle  ;
+\draw (189,37) node [anchor=north west][inner sep=0.75pt]   [align=left] {AIM};
+% Text Node
+\draw    (324,33) -- (365,33) -- (365,57) -- (324,57) -- cycle  ;
+\draw (327,37) node [anchor=north west][inner sep=0.75pt]   [align=left] {Filter};
+% Text Node
+\draw    (386,33) -- (450,33) -- (450,57) -- (386,57) -- cycle  ;
+\draw (389,37) node [anchor=north west][inner sep=0.75pt]   [align=left] {Speaker};
+% Text Node
+\draw (238,148) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {1/G};
+% Text Node
+\draw (311,140.5) node   [align=left] {$V_{\mathrm{spk}}$};
+% Text Node
+\draw (11,36) node [anchor=north west][inner sep=0.75pt]   [align=left] {$V_{\mathrm{input}}$};
+% Text Node
+\draw (100,45) node [anchor=north west][inner sep=0.75pt]   [align=left] {\mbox{-}};
+% Text Node
+\draw (90,37) node [anchor=north west][inner sep=0.75pt]   [align=left] {+};
+% Text Node
+\draw (244,38) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {$G_{\mathrm{pwr}}$};
+
+
+\end{tikzpicture}

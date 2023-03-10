@@ -1,0 +1,117 @@
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+	%uncomment if require: \path (0,173); %set diagram left start at 0, and has height of 173
+	
+	%Rounded Rect [id:dp1384107767481697] 
+	\draw   (25,42) .. controls (25,39.24) and (27.24,37) .. (30,37) -- (70,37) .. controls (72.76,37) and (75,39.24) .. (75,42) -- (75,57) .. controls (75,59.76) and (72.76,62) .. (70,62) -- (30,62) .. controls (27.24,62) and (25,59.76) .. (25,57) -- cycle ;
+	
+	%Shape: Rectangle [id:dp21588825794167765] 
+	\draw   (100,25) -- (175,25) -- (175,75) -- (100,75) -- cycle ;
+	
+	%Shape: Rectangle [id:dp3490479820342707] 
+	\draw   (200,25) -- (275,25) -- (275,75) -- (200,75) -- cycle ;
+	
+	%Shape: Rectangle [id:dp33842426481401633] 
+	\draw   (300,25) -- (350,25) -- (350,75) -- (300,75) -- cycle ;
+	
+	%Shape: Rectangle [id:dp37255646201919634] 
+	\draw   (375,25) -- (425,25) -- (425,75) -- (375,75) -- cycle ;
+	
+	%Shape: Rectangle [id:dp7847032693215759] 
+	\draw   (450,25) -- (500,25) -- (500,75) -- (450,75) -- cycle ;
+	
+	%Shape: Rectangle [id:dp31546701870918703] 
+	\draw   (525,25) -- (575,25) -- (575,75) -- (525,75) -- cycle ;
+	
+	%Rounded Rect [id:dp04914119895791669] 
+	\draw   (300,110) .. controls (300,104.48) and (304.48,100) .. (310,100) -- (365,100) .. controls (370.52,100) and (375,104.48) .. (375,110) -- (375,140) .. controls (375,145.52) and (370.52,150) .. (365,150) -- (310,150) .. controls (304.48,150) and (300,145.52) .. (300,140) -- cycle ;
+	
+	%Straight Lines [id:da6350274327867016] 
+	\draw    (75,50) -- (98,50) ;
+	\draw [shift={(100,50)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	%Straight Lines [id:da5761730573744579] 
+	\draw    (175,50) -- (198,50) ;
+	\draw [shift={(200,50)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	%Straight Lines [id:da8446351183431686] 
+	\draw    (275,50) -- (298,50) ;
+	\draw [shift={(300,50)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	%Straight Lines [id:da8956311563709014] 
+	\draw    (350,50) -- (373,50) ;
+	\draw [shift={(375,50)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	%Straight Lines [id:da6769720987576957] 
+	\draw    (425,50) -- (448,50) ;
+	\draw [shift={(450,50)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	%Straight Lines [id:da640763154281043] 
+	\draw    (500,50) -- (523,50) ;
+	\draw [shift={(525,50)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	%Straight Lines [id:da8759504451760138] 
+	\draw    (475,75) -- (475,125) -- (377,125) ;
+	\draw [shift={(375,125)}, rotate = 360] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	%Straight Lines [id:da9426589856839147] 
+	\draw    (550,75) -- (550,125) -- (377,125) ;
+	\draw [shift={(375,125)}, rotate = 360] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	%Straight Lines [id:da6532117977416998] 
+	\draw    (300,125) -- (250,125) -- (250,77) ;
+	\draw [shift={(250,75)}, rotate = 450] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	
+	
+	% Text Node
+	\draw (50,49.5) node   [align=left] {\begin{minipage}[lt]{34pt}\setlength\topsep{0pt}
+			\begin{center}
+				Input
+			\end{center}
+			
+	\end{minipage}};
+	% Text Node
+	\draw (137.5,50) node   [align=left] {\begin{minipage}[lt]{51.00000000000001pt}\setlength\topsep{0pt}
+			\begin{center}
+				{\small Filter}\\{\small Preamp}
+			\end{center}
+			
+	\end{minipage}};
+	% Text Node
+	\draw (237.5,50) node   [align=left] {\begin{minipage}[lt]{51.00000000000001pt}\setlength\topsep{0pt}
+			\begin{center}
+				Modulator
+			\end{center}
+			
+	\end{minipage}};
+	% Text Node
+	\draw (325,50) node   [align=left] {\begin{minipage}[lt]{34pt}\setlength\topsep{0pt}
+			\begin{center}
+				Gate Driver
+			\end{center}
+			
+	\end{minipage}};
+	% Text Node
+	\draw (400,50) node   [align=left] {\begin{minipage}[lt]{34pt}\setlength\topsep{0pt}
+			\begin{center}
+				Power\\Stage
+			\end{center}
+			
+	\end{minipage}};
+	% Text Node
+	\draw (475,50) node   [align=left] {\begin{minipage}[lt]{34pt}\setlength\topsep{0pt}
+			\begin{center}
+				Output\\Filter
+			\end{center}
+			
+	\end{minipage}};
+	% Text Node
+	\draw (550,50) node   [align=left] {\begin{minipage}[lt]{34pt}\setlength\topsep{0pt}
+			\begin{center}
+				Load
+			\end{center}
+			
+	\end{minipage}};
+	% Text Node
+	\draw (337.5,125) node   [align=left] {\begin{minipage}[lt]{51.00000000000001pt}\setlength\topsep{0pt}
+			\begin{center}
+				Regulator\\loop
+			\end{center}
+			
+	\end{minipage}};
+	
+	
+\end{tikzpicture}

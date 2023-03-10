@@ -1,0 +1,18 @@
+		% Single-ended output filter version
+		\draw (0, -1) coordinate(point1) to[L, l_=$L$, *-*] ++(2, 0) coordinate(point2) to[short, *-*] ++(2, 0) coordinate(point3) to[C, l_=$C_{f}$, *-*] ++(0, -3) coordinate(point4) to[short] ++(-2, 0) coordinate(point5) to[short] ++(-2, 0) coordinate(point6) to[short, -o] ++(-1, 0) ;
+		\draw (point1) to[short, *-o] ++(-1, 0) ;
+		\draw (point1) to[short, *-] ++(0, 1) to[C, l=$C_{s}$] ++(2, 0) coordinate(point7) ;
+		\draw (point2) to[short, *-] (point7) ;
+		\draw (point3) to[short, *-] ++(2, 0) to[R, l_=$R_{f}$] ++(0, -3) to[short, -*] (point4) ;
+		\draw (point3) ++(3.2,0) to[open, v=$V_{\mathrm{out}}(s)$] ++(0,-3) (point4) ;
+		\draw (point1) ++(-1,0) to[open, v=$V_{\mathrm{in}}(s)$] ++(0,-3) (point6) ;
+		% Differential output filter version
+		%		\draw (0, -1) coordinate(point1) to[L, l_=$L_{ind}$, *-*] ++(2, 0) coordinate(point2) to[R, l=$R_{ESR}$, *-*] ++(2, 0) coordinate(point3) to[C, l_=$C_{BTL}$, *-*] ++(0, -3) coordinate(point4) to[R, l=$R_{ESR}$, *-*] ++(-2, 0) coordinate(point5) to[L, l_=$L_{ind}$, *-*] ++(-2, 0) coordinate(point6) to[short, *-o] ++(-1, 0) ;
+		%		\draw (point1) to[short, *-o] ++(-1, 0) ;
+		%		\draw (point1) to[short, *-] ++(0, 1) to[C, l=$C_{s}$] ++(2, 0) coordinate(point7) ;
+		%		\draw (point2) to[short, *-] (point7) ;
+		%		\draw (point3) to[short, *-] ++(2, 0) to[R, l_=$R_{BTL}$] ++(0, -3) to[short, -*] (point4) ;
+		%		\draw (point5) to[short, *-] ++(0, -1) coordinate(point8) ;
+		%		\draw (point6) to[short, *-] ++(0, -1) to[C, l_=$C_{s}$] (point8) ;
+		%		\draw (point3) ++(3.2,0) to[open, v=$V_{\mathrm{out}}(s)$] ++(0,-3) (point4) ;
+		%		\draw (point1) ++(-1,0) to[open, v=$V_{\mathrm{in}}(s)$] ++(0,-3) (point6) ;

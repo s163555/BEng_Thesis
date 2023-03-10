@@ -1,0 +1,20 @@
+%	% Draw L_ind and R_f
+%	\draw (0,0) 	to[L,l=$L_{ind}$,o-] 		++(2,0)
+%					node(Cf_N){}
+%					to[short]					++(1.75,0)
+%					to[R,l=$R_{f}$]				++(0,-2)
+%					to[short]					++(-1.75,0)
+%					node(Cf_S){}
+%					to[short]					++(-2,0)
+%					node(GND)[ground]{};
+%	% Draw C_f
+%	\draw (Cf_N)	to[C,l=$C_{f}$,*-*]			(Cf_S);
+%	% Input terminal labels
+%	\draw (0,0)		node()[left]{$V_{sw}$};
+%	\draw (GND) to[open] ++(0,-0.6);
+
+\draw (1, -1) coordinate(point1) to[L, l=$L_{\mathrm{ind}}$] (2, -1) to[short, -*] (3, -1) coordinate(point2) to[C, l_=$C_{f}$, *-*] (3, -3) coordinate(point3) node[ground]{} ;
+\draw (point1) to[short, -o] (0.5, -1) node()[left]{$V_{sw}$} ;
+\draw (5, -3) coordinate(point4) to[R, l=$R_{f}$] (5, -1) coordinate(point5) ;
+\draw (point4) to[short, -*] (point3) ;
+\draw (point2) to[short, *-] (point5) ;

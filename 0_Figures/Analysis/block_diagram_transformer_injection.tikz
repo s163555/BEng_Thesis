@@ -1,0 +1,230 @@
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+	%uncomment if require: \path (0,319); %set diagram left start at 0, and has height of 319
+	
+	%Straight Lines [id:da15735186867115303] 
+	\draw    (380,114.51) ;
+	%Shape: Resistor [id:dp9057667935403209] 
+	\draw  [line width=1.5]  (240,70.7) -- (250.8,70.7) -- (253.2,64.51) -- (258,76.89) -- (262.8,64.51) -- (267.6,76.89) -- (272.4,64.51) -- (277.2,76.89) -- (282,64.51) -- (286.8,76.89) -- (289.2,70.7) -- (300,70.7) ;
+	%Shape: Rectangle [id:dp3413763907901186] 
+	\draw  [line width=1.5]  (235,10.8) -- (305,10.8) -- (305,84.51) -- (235,84.51) -- cycle ;
+	
+	%Shape: Rectangle [id:dp11748765664080651] 
+	\draw  [line width=1.5]  (220,89.51) -- (320,89.51) -- (320,154.51) -- (220,154.51) -- cycle ;
+	%Shape: Inductor [id:dp2215516061269578] 
+	\draw   (310.48,131.51) -- (310.48,135.14) .. controls (310.48,135.98) and (305.94,136.66) .. (300.36,136.66) .. controls (294.77,136.66) and (290.24,135.98) .. (290.24,135.14) .. controls (290.24,135.98) and (285.7,136.66) .. (280.12,136.66) .. controls (274.53,136.66) and (270,135.98) .. (270,135.14) .. controls (270,135.98) and (265.47,136.66) .. (259.88,136.66) .. controls (254.3,136.66) and (249.76,135.98) .. (249.76,135.14) .. controls (249.76,135.98) and (245.23,136.66) .. (239.64,136.66) .. controls (234.06,136.66) and (229.52,135.98) .. (229.52,135.14) -- (229.52,131.51) ;
+	%Shape: Inductor [id:dp6400099710814144] 
+	\draw   (229.52,149.51) -- (229.52,145.88) .. controls (229.52,145.05) and (234.06,144.37) .. (239.64,144.37) .. controls (245.23,144.37) and (249.76,145.05) .. (249.76,145.88) .. controls (249.76,145.05) and (254.3,144.37) .. (259.88,144.37) .. controls (265.47,144.37) and (270,145.05) .. (270,145.88) .. controls (270,145.05) and (274.53,144.37) .. (280.12,144.37) .. controls (285.7,144.37) and (290.24,145.05) .. (290.24,145.88) .. controls (290.24,145.05) and (294.77,144.37) .. (300.36,144.37) .. controls (305.94,144.37) and (310.48,145.05) .. (310.48,145.88) -- (310.48,149.51) ;
+	%Straight Lines [id:da2673964347130813] 
+	\draw    (310.48,139.23) -- (229.52,139.23) ;
+	%Straight Lines [id:da09279762971391459] 
+	\draw    (310.48,141.8) -- (229.52,141.8) ;
+	
+	
+	%Straight Lines [id:da2761001544350641] 
+	\draw    (220,89.51) -- (220,31.86) ;
+	\draw [shift={(220,29.51)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+	%Straight Lines [id:da3809757606569024] 
+	\draw    (320,89.51) -- (320,31.86) ;
+	\draw [shift={(320,29.51)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+	%Straight Lines [id:da5383504403874997] 
+	\draw    (270,154.51) -- (270,172.51) ;
+	\draw [shift={(270,174.51)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	%Straight Lines [id:da299918873882153] 
+	\draw    (195,99.51) -- (219.21,31.73) ;
+	\draw [shift={(220,29.51)}, rotate = 289.65] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+	\draw [shift={(207.5,64.51)}, rotate = 289.65] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (10.72,-5.15) -- (0,0) -- (10.72,5.15) -- (7.12,0) -- cycle    ;
+	%Straight Lines [id:da15762166605604144] 
+	\draw    (345,99.51) -- (320.79,31.73) ;
+	\draw [shift={(320,29.51)}, rotate = 250.35] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+	\draw [shift={(332.5,64.51)}, rotate = 250.35] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (10.72,-5.15) -- (0,0) -- (10.72,5.15) -- (7.12,0) -- cycle    ;
+	%Straight Lines [id:da21183603730332523] 
+	\draw    (233,184.51) -- (195,184.51) -- (195,114.51) ;
+	\draw [shift={(235,184.51)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	%Straight Lines [id:da9973840816661179] 
+	\draw    (307,184.51) -- (340,184.51) -- (340,114.51) ;
+	\draw [shift={(305,184.51)}, rotate = 0] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	%Straight Lines [id:da02531886687147078] 
+	\draw    (560,50) -- (560,80) -- (492,80) ;
+	\draw [shift={(490,80)}, rotate = 360] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	%Straight Lines [id:da9679903044516098] 
+	\draw    (620,80) -- (490,80) ;
+	%Straight Lines [id:da8177057617014005] 
+	\draw    (450,80) -- (360,80) -- (360,42) ;
+	\draw [shift={(360,40)}, rotate = 450] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	%Straight Lines [id:da44249742206669795] 
+	\draw    (240,285) -- (155,285) -- (155,52) ;
+	\draw [shift={(155,50)}, rotate = 450] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	%Straight Lines [id:da434984126138388] 
+	\draw    (620,40) -- (620,285) -- (287,285) ;
+	\draw [shift={(285,285)}, rotate = 360] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	%Rounded Rect [id:dp5356236767557228] 
+	\draw  [line width=3]  (423.89,181.22) .. controls (423.89,180.28) and (424.65,179.51) .. (425.6,179.51) -- (460.44,179.51) .. controls (461.38,179.51) and (462.14,180.28) .. (462.14,181.22) -- (462.14,202.81) .. controls (462.14,203.75) and (461.38,204.51) .. (460.44,204.51) -- (425.6,204.51) .. controls (424.65,204.51) and (423.89,203.75) .. (423.89,202.81) -- cycle ;
+	%Shape: Path Data [id:dp8744529124252245] 
+	\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (423.08,204.51) -- (463.72,204.51) .. controls (464.24,204.51) and (464.45,204.93) .. (464.19,205.45) .. controls (464.69,205.45) and (465.3,205.86) .. (465.55,206.35) -- (476.69,228.61) .. controls (476.94,229.11) and (476.74,229.51) .. (476.24,229.51) -- (410.58,229.51) .. controls (410.06,229.51) and (409.85,229.09) .. (410.11,228.58) -- (421.68,205.45) .. controls (421.93,204.93) and (422.56,204.51) .. (423.08,204.51) -- cycle ;
+	%Shape: Path Data [id:dp07874170081554621] 
+	\draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (418.64,220.94) -- (425.9,214.51) -- (459.89,214.51) -- (467.14,220.94) -- (418.64,220.94) -- cycle ;
+	%Rounded Rect [id:dp13746892324163995] 
+	\draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (433.14,224.01) .. controls (433.14,222.63) and (434.26,221.51) .. (435.64,221.51) -- (450.64,221.51) .. controls (452.02,221.51) and (453.14,222.63) .. (453.14,224.01) -- (453.14,224.01) .. controls (453.14,225.39) and (452.02,226.51) .. (450.64,226.51) -- (435.64,226.51) .. controls (434.26,226.51) and (433.14,225.39) .. (433.14,224.01) -- cycle ;
+	
+	%Shape: Rectangle [id:dp8051019294222979] 
+	\draw   (390,124.51) -- (495,124.51) -- (495,239.51) -- (390,239.51) -- cycle ;
+	
+	%Straight Lines [id:da7928450406272949] 
+	\draw    (270,194.51) -- (270,219.51) -- (388,219.51) ;
+	\draw [shift={(390,219.51)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	%Straight Lines [id:da3870728561566599] 
+	\draw    (210,30) -- (233,30) ;
+	\draw [shift={(235,30)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	%Straight Lines [id:da028020813655613486] 
+	\draw    (305,30) -- (333,30) ;
+	\draw [shift={(335,30)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	
+	% Text Node
+	\draw    (333,18) -- (401,18) -- (401,41) -- (333,41) -- cycle  ;
+	\draw (367,29.5) node  [font=\small] [align=left] {\begin{minipage}[lt]{43.538224pt}\setlength\topsep{0pt}
+			\begin{center}
+				Modulator
+			\end{center}
+			
+	\end{minipage}};
+	% Text Node
+	\draw    (77,11) -- (132,11) -- (132,52) -- (77,52) -- cycle  ;
+	\draw (104.5,31.5) node  [font=\small] [align=left] {\begin{minipage}[lt]{34.862172pt}\setlength\topsep{0pt}
+			\begin{center}
+				Filter\\Preamp
+			\end{center}
+			
+	\end{minipage}};
+	% Text Node
+	\draw  [dash pattern={on 0.84pt off 2.51pt}]  (28, 30.5) circle [x radius= 24.04, y radius= 13.44]   ;
+	\draw (28,30.5) node  [font=\small] [align=left] {\begin{minipage}[lt]{23.138224pt}\setlength\topsep{0pt}
+			\begin{center}
+				Input
+			\end{center}
+			
+	\end{minipage}};
+	% Text Node
+	\draw    (418,8) -- (462,8) -- (462,49) -- (418,49) -- cycle  ;
+	\draw (440,28.5) node  [font=\small] [align=left] {\begin{minipage}[lt]{27.193948000000002pt}\setlength\topsep{0pt}
+			\begin{center}
+				Gate\\Driver
+			\end{center}
+			
+	\end{minipage}};
+	% Text Node
+	\draw    (476,8) -- (522,8) -- (522,49) -- (476,49) -- cycle  ;
+	\draw (499,28.5) node  [font=\small] [align=left] {\begin{minipage}[lt]{28.736052pt}\setlength\topsep{0pt}
+			\begin{center}
+				Power\\Stage
+			\end{center}
+			
+	\end{minipage}};
+	% Text Node
+	\draw    (538,11) -- (586,11) -- (586,52) -- (538,52) -- cycle  ;
+	\draw (562,31.5) node  [font=\small] [align=left] {\begin{minipage}[lt]{30.272172pt}\setlength\topsep{0pt}
+			\begin{center}
+				Output\\Filter
+			\end{center}
+			
+	\end{minipage}};
+	% Text Node
+	\draw  [line width=0.75]   (604,19) -- (642,19) -- (642,42) -- (604,42) -- cycle  ;
+	\draw (623,30.5) node  [font=\small] [align=left] {\begin{minipage}[lt]{23.138224pt}\setlength\topsep{0pt}
+			\begin{center}
+				Load
+			\end{center}
+			
+	\end{minipage}};
+	% Text Node
+	\draw    (449.86,60) -- (488.86,60) -- (488.86,101) -- (449.86,101) -- cycle  ;
+	\draw (469.36,80.5) node  [font=\small] [align=left] {\begin{minipage}[lt]{23.642172pt}\setlength\topsep{0pt}
+			\begin{center}
+				Inner\\Loop
+			\end{center}
+			
+	\end{minipage}};
+	% Text Node
+	\draw    (242,263) -- (287,263) -- (287,308) -- (242,308) -- cycle  ;
+	\draw (264.5,285.5) node   [align=left] {\begin{minipage}[lt]{28.232172pt}\setlength\topsep{0pt}
+			\begin{center}
+				Outer\\Loop
+			\end{center}
+			
+	\end{minipage}};
+	% Text Node
+	\draw    (149,11) -- (212,11) -- (212,52) -- (149,52) -- cycle  ;
+	\draw (180.5,31.5) node  [font=\small] [align=left] {\begin{minipage}[lt]{40.472172pt}\setlength\topsep{0pt}
+			\begin{center}
+				PI\\controller
+			\end{center}
+			
+	\end{minipage}};
+	% Text Node
+	\draw  [line width=1.5]   (233.5,172.01) -- (304.5,172.01) -- (304.5,196.01) -- (233.5,196.01) -- cycle  ;
+	\draw (269,184.01) node   [align=left] {\begin{minipage}[lt]{45.244276000000006pt}\setlength\topsep{0pt}
+			\begin{center}
+				\textbf{Bode100}
+			\end{center}
+			
+	\end{minipage}};
+	% Text Node
+	\draw  [dash pattern={on 5.63pt off 4.5pt}][line width=1.5]   (168,97.51) -- (212,97.51) -- (212,115.51) -- (168,115.51) -- cycle  ;
+	\draw (190,106.51) node  [font=\scriptsize] [align=left] {\begin{minipage}[lt]{26.920724000000003pt}\setlength\topsep{0pt}
+			\begin{center}
+				\textbf{Probe1}
+			\end{center}
+			
+	\end{minipage}};
+	% Text Node
+	\draw  [dash pattern={on 5.63pt off 4.5pt}][line width=1.5]   (327,98.01) -- (371,98.01) -- (371,116.01) -- (327,116.01) -- cycle  ;
+	\draw (349,107.01) node  [font=\scriptsize] [align=left] {\begin{minipage}[lt]{26.920724000000003pt}\setlength\topsep{0pt}
+			\begin{center}
+				\textbf{Probe2}
+			\end{center}
+			
+	\end{minipage}};
+	% Text Node
+	\draw (270.29,30.5) node   [align=left] {\begin{minipage}[lt]{44.66144800000001pt}\setlength\topsep{0pt}
+			\begin{center}
+				\textbf{Injection}\\\textbf{Resistor}
+			\end{center}
+			
+	\end{minipage}};
+	% Text Node
+	\draw (268.53,110.01) node   [align=left] {\begin{minipage}[lt]{62.244276000000006pt}\setlength\topsep{0pt}
+			\begin{center}
+				\textbf{Injection}\\\textbf{Transformer}
+			\end{center}
+			
+	\end{minipage}};
+	% Text Node
+	\draw (442,150.01) node   [align=left] {\begin{minipage}[lt]{43.532172pt}\setlength\topsep{0pt}
+			\begin{center}
+				\textbf{Host}\\\textbf{Machine}
+			\end{center}
+			
+	\end{minipage}};
+	% Connection
+	\draw    (462,28.5) -- (474,28.5) ;
+	\draw [shift={(476,28.5)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	% Connection
+	\draw    (522,29.6) -- (536,30.26) ;
+	\draw [shift={(538,30.36)}, rotate = 182.73] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	% Connection
+	\draw    (586,31.11) -- (602,30.84) ;
+	\draw [shift={(604,30.81)}, rotate = 539.06] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	% Connection
+	\draw    (52.04,30.81) -- (75,31.11) ;
+	\draw [shift={(77,31.14)}, rotate = 180.75] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	% Connection
+	\draw    (401,29.03) -- (416,28.83) ;
+	\draw [shift={(418,28.8)}, rotate = 539.22] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	% Connection
+	\draw    (132,31.5) -- (147,31.5) ;
+	\draw [shift={(149,31.5)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	
+\end{tikzpicture}

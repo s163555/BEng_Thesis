@@ -1,0 +1,61 @@
+\documentclass[12pt,a4paper,twoside,12pt]{report} %openright
+\input{0_Setup/Preamble.tex}
+\input{0_Setup/Statics.tex}
+\input{0_Setup/Settings.tex}
+
+\addbibresource{references.bib}
+
+\begin{document}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%Frontmatter sections%%%%%%%%%%%%%%%%
+	\pagenumbering{roman}
+	\input{1_Front/Frontpage.tex}
+	\pagecolor{white}
+	\newgeometry{top=2.81cm, bottom=2.75cm, outer=2.5cm, inner=3.5cm}
+	\pagestyle{empty}
+	\cleardoublepage
+	\input{1_Front/Copyright.tex}
+	\clearpage
+	\pagestyle{main}
+	\input{1_Front/Approval.tex}
+	\clearpage 
+	\input{1_Front/Abstract.tex}
+	\clearpage 
+	\input{1_Front/Acknowledgements.tex}
+	\clearpage 
+	\input{1_Front/Denotation.tex}
+	\clearpage
+	\tableofcontents
+	\clearpage
+	\listoffigures
+	\clearpage
+	\listoftables
+	\clearpage
+	\phantomsection % Add this for problems with referring in TOC 
+	\addcontentsline{toc}{chapter}{\lstlistlistingname}
+	\lstlistoflistings
+	\cleardoublepage
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%Document chapters%%%%%%%%%%%%%%%%%%%%
+	\pagenumbering{arabic}
+	\input{2_Chapters/01_Introduction.tex}
+	\clearpage 
+	\input{2_Chapters/02_Theory.tex}
+	\clearpage 
+	\input{2_Chapters/03_Synthesis.tex}
+	\clearpage
+	\input{2_Chapters/04_Production.tex}
+	\clearpage
+	\input{2_Chapters/05_Analysis.tex}
+	\clearpage
+	\input{2_Chapters/06_Conclusion.tex}
+	\clearpage
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%Backmatter sections%%%%%%%%%%%%%%%%%
+	\printbibliography[heading=bibnumbered,title={Bibliography}]
+	\cleardoublepage 
+	\appendix
+	\input{3_Back/Appendix.tex}
+	\cleartoleftpage
+	\input{3_Back/Backpage.tex}
+\end{document}

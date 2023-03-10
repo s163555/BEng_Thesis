@@ -1,0 +1,61 @@
+%\begin{circuitikz} [>=Triangle]
+    % MIDDLE
+    \begin{scope} %[blue]
+        % Resistor
+        \draw (-1,0) node[](left_R){} to[R,l=$R_{BTL}$] (1,0) node[](right_R){};
+        % Filter cap
+        \draw (left_R) 	node[circ]{}	to[short] 	++(0,-1.5) 	node(left_C){};
+        \draw (right_R) node[circ]{} 	to[short]	++(0,-1.5) 	node(right_C){};
+        \draw (left_C) to[C,l=$C_{BTL}$] (right_C);
+        % Left inductor
+        \draw (left_R)
+        ++(-2,0) node[](left_L){}
+        to[L,l=$L_{ind}$] (left_R);
+        % Right inductor
+        \draw (right_R)
+        to[L,l=$L_{ind}$] ++(2,0) node[](right_L){};
+    \end{scope}
+    % LEFT SIDE
+    \begin{scope} %[red]
+        % Top FET
+        \draw (left_L) 
+        to[Tnmos,n=T1] ++(0,3) node[vcc](left_VD){} node[above, yshift=0.3cm]{$V_{\mathrm{DD}}$};
+        \draw (T1.G) node[left]{$q$} ++(+1.2,0) node[]{$Q_1$};
+        % Bottom FET
+        \draw (left_L) ++(0,-3)
+        node[tlground](left_VS){} %node[below]{$V_S$}
+        to[Tnmos,n=T2] ++(0,3) node[circ]{};
+        \draw (T2.G) node[left]{$\bar{q}$} ++(+1.2,0) node[]{$Q_2$};
+    \end{scope}
+    % RIGHT SIDE
+    \begin{scope} %[green]
+        % Top FET
+        \draw (right_L) 
+        to[Tnmos,mirror,n=T3] ++(0,3) node[vcc](right_VD){} node[above, yshift=0.3cm]{$V_{\mathrm{DD}}$};
+        \draw (T3.G) node[right]{$\bar{q}$} ++(-1.2,0) node[]{$Q_3$};
+        % Bottom FET
+        \draw (right_L) ++(0,-3)
+        node[tlground](right_VS){} %node[below]{$V_S$}
+        to[Tnmos,mirror,n=T4] ++(0,3) node[circ]{};
+        \draw (T4.G) node[right]{$q$} ++(-1.2,0) node[]{$Q_4$};
+    \end{scope}
+    % LINES
+    % Specify first nodes
+    \path (left_VD) +(.5,0) coordinate (A0);
+    \path (left_L) +(.5,.75) coordinate (A1);
+    \path (left_R) +(0,.75) coordinate (A2);
+    \path (right_R) +(0,-.75) coordinate (A3);
+    \path (right_L) +(-.5,-.75) coordinate (A4);
+    \path (right_VS) +(-.5,0) coordinate (A5);
+    % First line
+    \draw [red, dashed, thick, rounded corners,->] (A0) -- (A1) -- (A2) -- (A3) -- (A4) -- (A5);
+    % Specify first nodes
+    \path (right_VD) +(-.5,0) coordinate (B0);
+    \path (right_L) +(-.5,.75) coordinate (B1);
+    \path (right_R) +(0,.75) coordinate (B2);
+    \path (left_R) +(0,-.75) coordinate (B3);
+    \path (left_L) +(.5,-.75) coordinate (B4);
+    \path (left_VS) +(.5,0) coordinate (B5);
+    % First line
+    \draw [red, dashed, thick, rounded corners,->] (B0) -- (B1) -- (B2) -- (B3) -- (B4) -- (B5);
+%\end{circuitikz}

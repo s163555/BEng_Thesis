@@ -1,0 +1,43 @@
+	%\draw[color=black, thick] 
+		%(0,0) node[plain amp] (opamp) {}
+		%(-0.6,-0.5) node {+}
+		%(-0.6,0.5) node {--}
+		%(-3.5,-0.5) node[anchor=east] {$V_{in}(t)$} to[C,l=$C_1$,o-] (opamp.+) 
+		%(-1.5,-0.5) to[short] (-1.5,-1) to[R,l=$R_1$] (-1.5,-2.5) node[ground] {}
+		%(opamp.-) to[short] (-1.5,0.5) to[short] (-1.5,1.5) to[R,l_=$R_2$] (1.5,1.5) to[short] (1.5,0) to[short] (opamp.out)
+		%(-1.5,1.5) to[R,l=$R_3$] (-3.5,1.5) node[ground] {}
+		%(-1.5,1.5) to[short] (-1.5,2.5) to[C,l=$C_2$] (1.5,2.5) to[short] (1.5,1.5)
+		%(opamp.out) to[short, -o] (2.5,0) node[anchor=west] {$V_{out}(t)$};
+		
+%	\draw (2,-0.5) node (v6) {} to[C=$C_{ds}$] (2,1) node (v7) {};
+%	\draw (-1,-2) node (v1) {} to[C=$C_{gs}$] (-1,-3) node (v3) {};
+%	\draw (1,-3) node (v5) {} to[D*=$D_{b}$] (1,-1);
+%	\draw (0,1) to[R=$R_{ds}$] (0,-0.5);
+%	\draw (-1,1) node (v2) {} to[C=$C_{gd}$] (-1,-1) node (v4) {};
+%	\draw (v3) -- (2,-3) -- (v6);
+%	\draw (v2) -- (v7);
+%	\draw (v5) -- (1,1);
+%	\node at (0,-0.5) {};
+%	\node at (0,-3) {};
+%	\draw (v4) -- (v1);
+%	\draw (v4) -- (-2,-1);
+%	\node at (-2,-1) {G};
+%	\draw (0.5,1) -- (0.5,2);
+%	\node at (0.5,2) {D};
+%	\draw (0.5,-3) -- (0.5,-4);
+%	\node at (0.5,-4) {S};
+%	%\draw (0,-0.5) to[nmos,yscale=-1] ++(0,-2.5);
+%	\draw (0,-1.5) node[nmos,yscale=-1] (mos) {}
+	%(mos.base) node[anchor=west] {B}
+	%(mos.gate) node[anchor=east] {G}
+	%(mos.drain) node[anchor=north] {D}
+	%(mos.source) node[anchor=south] {S}
+%	;
+	\draw (-5.50, 1.73) node[nmos](nmos1){};
+	\draw (nmos1.E) to[short, -*] (-5.5, 0) coordinate(point1) to[short, *-*] (-4.5, 0) coordinate(point2) to[empty diode, l_=$D_{b}$, *-*] (-4.5, 4) coordinate(point3) to[short, *-] (-3.5, 4) coordinate(point4) to[short] (point4) to[C, l=$C_{ds}$] (-3.5, 2) to[short] (-3.5, 0) to[short, -*] (point2) ;
+	\draw (nmos1.B) to[short, l_=G, *-o] (-7.5, 1.73) ;
+	\draw (-6.5, 4) coordinate(point5) to[C, l_=$C_{gd}$] (-6.5, 2) to[short] (-6.5, 1.5) to[C, l_=$C_{gs}$] (-6.5, 0) to[short, -*] (point1) to[short, *-*] (point1) ;
+	\draw (point5) to[short, -*] (-5.5, 4) coordinate(point6) to[short, *-*] (point3) ;
+	\draw (-5, 4) to[short, l=D, *-o] (-5, 5) ;
+	\draw (-5, 0) to[short, l=S, *-o] (-5, -1) ;
+	\draw (point6) to[R, l=$R_{ds}$, *-] (nmos1.C) ;

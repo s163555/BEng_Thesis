@@ -1,0 +1,30 @@
+%\begin{tikzpicture}
+	%\draw (0,0) 	node[op amp, noinv input up](opamp){};
+	% C_1 and R_1
+	%\draw (opamp.+) to[R,l=$R_1$,*-o] ++(0,2.5) node[above]{$V_{ref}$};
+	%\draw (opamp.+) to[C,l_=$C_1$,-o] ++(-2.5,0) node[left](V_in){$V_{in}$};
+	% R_2, R_3, and C_2
+	%\draw (opamp.-) to[short,-*] ++(0,-1) node(node_m){};
+	%\draw (node_m) to[R,l_=$R_3$,*-o] ++(-2.5,0) node[left]{$V_{ref}$};
+	
+	%\draw (node_m) to[R,l=$R_2$,-*] ++(2.5,0) -| (opamp.out);
+	%\draw (node_-) to[short] ++(0,-1.25) to[C,l=$C_2$] ++(2.5,0) -| (opamp.out);
+	
+	% V_out
+	%\draw (opamp.out) to[short,*-o] ++(1,0) node[right]{$V_{out}$};
+	%\draw (opamp.out) -| (node_out);
+%\end{tikzpicture}
+
+\node   (comp)  [op amp, noinv input up, right, anchor=-] {};
+	% C_1 and R_1
+\draw (comp.+) to[R,l=$R_1$,*-o] ++(0,2.5) node[above]{$V_{\mathrm{ref}}$};
+\draw (comp.+) to[C,l_=$C_3$,-o] ++(-2.5,0) node[left](V_in){$V_{in}$};
+	% R_2, R_3, and C_2
+\draw (comp.-) to[short,-] ++(0,-1) node(node_m){};
+\draw (node_m) to[R,l_=$R_3$,*-o] ++(-2.38,0) node[left]{$V_{\mathrm{ref}}$};
+
+\draw (node_m) to[R,l=$R_2$,-*] ++(2.38,0) -| (comp.out);
+\draw (node_m) to[short] ++(0,-1.25) to[C,l=$C_2$] ++(2.38,0) -| (comp.out);
+
+	% V_out
+\draw (comp.out) to[short,*-o] ++(1,0) node[right]{$V_{\mathrm{out}}$};

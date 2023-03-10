@@ -1,0 +1,35 @@
+	\draw (0,0) to[sqV,l=$V_{\mathrm{pwm}}$] ++(0,-2) node[tlground]{};
+	\draw (0,0) to[short,.-*] ++(1.5,0) node(PWM){};
+	\draw (PWM) to[short] ++(0,.75) ++(2.5,0) to[sDo,l_=$D$] ++(-2.5,0) ++(2.5,0) to[short,-*] ++(0,-.75) node(node_DR){};
+	\draw (PWM) to[short] ++(0,-.75) to[vR,l=$R_{\mathrm{dt}}$] ++(2.5,0) to[short] (node_DR);
+	\draw (node_DR){} to[short,-*] ++(1,0) node(C_N){} to[short,-] ++(1,0) node[right](out){};
+	\draw (C_N) to[C,l=$C_{\mathrm{dt}}$] ++(0,-2) node[tlground]{};
+	
+	\draw [thick] (6,-0.5) coordinate (u1) rectangle ++(2.2,1); % shape
+	\draw [pin] (u1) ++ (0,0.5) coordinate (u1 in) node[right]{Gate Driver};
+	%node[above left]{5}; % CON
+	%\draw [pin] (u1) ++ (0,1) coordinate (u1 tri)
+	%node[right]{TRI}
+	%node[above left]{2}; % TRI
+	%\draw [pin] (u1) ++ (0,1.5) coordinate (u1 thr)
+	%node[right]{THR}
+	%node[above left]{6}; % THR
+	%\draw [pin] (u1) ++ (0,2) coordinate (u1 dis)
+	%node[right]{DIS}
+	%node[above left]{7}; % DIS
+	%\draw [pin] (u1) ++ (0,2.5) coordinate (u1 rst) 
+	%node[right]{RST}
+	%node[above left]{4}; % RST
+	%\draw [pin] (u1) ++ (1,3) coordinate (u1 vcc)
+	%node[below]{VCC}
+	%node[above left]{8}; % VCC
+	%\draw [pin] (u1) ++ (1,0) coordinate (u1 gnd)
+	%node[above]{GND}
+	%node[below left]{1}; % GND
+	%\draw [pin] (u1) ++ (2,2.5) coordinate (u1 out)
+	%node[left]{OUT};
+	%node[above right]{3}; % OUT
+	%\draw (u1) ++ (2,0);
+	%node[right]{\ctikzlabel{$U_1$}{NE555}}; % NE555P
+	
+	\draw (8.2,0) to[short,-o] ++(1,0) node[right]{$V_{\mathrm{G}}$};

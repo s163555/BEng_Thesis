@@ -1,0 +1,91 @@
+% Encoding
+\usepackage[utf8]{inputenc}			% Input encoding
+\usepackage[T1]{fontenc}			% Font encoding
+\usepackage[protrusion=true,expansion=true,final,babel]{microtype} % Better text appearance
+
+% Bibliography
+\usepackage[backend=biber,
+    style=ieee,
+    backref=false,
+    abbreviate=false,
+    dateabbrev=false,
+    alldates=long,
+    sorting=ynt,
+    dashed=false,
+    block=ragged]
+    {biblatex}
+
+% Math and units packages
+\usepackage{amsmath}				% Enhanced math
+\usepackage{amsfonts}				% Extra math fonts
+\usepackage{amssymb}				% Extra math symbols
+\usepackage{siunitx}				% Standardized SI units
+
+% Tables
+\usepackage{colortbl}				% Coloured cells
+\usepackage{booktabs}				% Enhanced table quality and extra commands
+\usepackage{multirow}				% Cells spanning multiple rows (used by tablesgenerator)
+\usepackage[table,xcdraw]{xcolor}	% Extra colors (used by tablesgenerator)
+%\usepackage{longtable}				% Multiple page tables
+\usepackage{ltablex}				% Modified tabularx (auto-sized columns) with longtable (multi-page) tables
+\usepackage{adjustbox}				% Adjust table widths (?)
+
+% Figures, floats, and graphics
+\usepackage{graphicx}				% Extension to the graphics package
+\graphicspath{{0_Figures/}}
+\usepackage{caption}				% Customisable captions in floating environments (figs/tables)
+\usepackage{subcaption}				% for subfigures
+\usepackage{float}					% Imploved float options
+
+% Drawing
+\usepackage{tikz}					% Create graphics
+\usetikzlibrary{arrows,backgrounds,positioning,fit,petri}
+%\usepackage{tikzscale}
+
+\usepackage{xstring}				% For manipulating strings. Required by CircuiTikZ
+\usepackage[american,
+	nooldvoltagedirection]
+	{circuitikz}					% Create circuit graphics (using TikZ)
+
+% Lists
+\usepackage{enumitem}				% Control layout of basic list environments
+
+% Page layout
+\usepackage{geometry}				% Package for changing page margins (before fancyhdr) 
+\usepackage{fancyhdr}       		% Package to change header and footer
+\usepackage{parskip}        		% Package to tweak paragraph skipping (instead of indents a small skip is added after every paragraph)
+\usepackage{lastpage}				% Label to referece last page (\pageref{LastPage})
+
+% Extras
+\usepackage[english]{babel} 		% localisation 
+\usepackage{csquotes}				% For biblatex with babel
+\usepackage{blindtext}				% Lorem Ipsum style placeholders
+\usepackage[final]{pdfpages}		% Import PDF files (use [draft] for empty placeholders)
+%\usepackage{fontspec}				% Only for use with XeLatex
+\usepackage{datetime}				% For dates and time functions
+\usepackage{pgfplots}				% Graphing tool (based on tikz)
+\usepackage{titlesec}				% Customizable headers, titles, etc
+%\usepackage[printwatermark=false]{xwatermark} % Package for wartermark. Toggle printwatermark true or false to include or remove the watermark
+\usepackage{listingsutf8}       		% Package for inserting code, (before cleveref)
+\usepackage{hyperref}       		% Package for cross referencing (also loads url package)
+\usepackage{cleveref}       		% improved cross referencing
+
+\PassOptionsToPackage{hyphens}{url} % Ability to line break urls at hyphens
+\usepackage{textcomp}       		% \textdegree = °C and other useful symbols
+\usepackage{calc}           		% Adds ability for latex to calculate (3pt+2pt)
+\usepackage[numbib]{tocbibind}		% Putting report lists in TOC
+\usepackage{pdflscape}				% PDF page rotations
+\usepackage[numbered,
+	framed]{matlab-prettifier}		% Pretty-print MATLAB and Octave code
+\usepackage[most]{tcolorbox}		% Colored boxes around figures
+
+% Matcha.io
+\usepackage{mathdots}
+\usepackage{yhmath}
+\usepackage{cancel}
+\usepackage{gensymb}
+\usepackage{tabularx}
+\usetikzlibrary{patterns}
+\usetikzlibrary{shadows.blur}
+\usetikzlibrary{shapes}
+
